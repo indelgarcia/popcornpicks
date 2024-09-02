@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+}
+.foto-p {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 10px;
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 10px;
+  text-align: left;
+  background: white;
+}
+
+.he-izq {
+  float: left;
+}
+
+.he-der {
+  float: right;
+  padding: 50px 50px;
+  border: 2px;
+  border-color: black;
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+/* Crea dos columnas desiguales que floten una al lado de la otra. */
+/* Columna izquierda */
+.leftcolumn {
+  float: left;
+  width: 75%;
+}
+
+/* Columna derecha */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+
+/* Falsa Imagen */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Agregar un efecto de tarjeta para artículos */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  /*
+    La propiedad CSS clear especifica si un elemento puede estar al lado 
+    de elementos flotantes que lo preceden o si debe ser movido (cleared) 
+    debajo de ellos.
+    
+    */
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - cuando la pantalla tiene menos de 800 px de ancho, hace que las dos columnas se apilen una encima de la otra en lugar de una al lado de la otra */
+@media screen and (max-width: 800px) {
+  .leftcolumn,
+  .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - cuando la pantalla tiene menos de 400 px de ancho, hace que los enlaces de navegación se apilen uno encima del otro en lugar de uno al lado del otro */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+
+/* ******   M E N U   ********* */
+/* Aplicar estilo a la barra de navegación superior */
+/* Cambiar de color al pasar el mouse */
+.topnav a:hover {
+  background-color: rgb(221, 221, 221);
+  color: black;
+}
+
+/* Aplicar estilo a los enlaces de topnav */
+.a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
