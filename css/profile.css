@@ -1,122 +1,73 @@
-* {
-  box-sizing: border-box;
-}
-.foto-p {
-  vertical-align: middle;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-}
-
 body {
   font-family: Arial, sans-serif;
-  padding: 10px;
-  background: #f1f1f1;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
 }
 
-/* Header/Blog Title */
-.header {
-  padding: 10px;
-  text-align: left;
-  background: white;
-}
-
-.he-izq {
-  float: left;
-}
-
-.he-der {
-  float: right;
-  padding: 50px 50px;
-  border: 2px;
-  border-color: black;
-}
-
-.header h1 {
-  font-size: 50px;
-}
-
-/* Crea dos columnas desiguales que floten una al lado de la otra. */
-/* Columna izquierda */
-.leftcolumn {
-  float: left;
-  width: 75%;
-}
-
-/* Columna derecha */
-.rightcolumn {
-  float: left;
-  width: 25%;
-  background-color: #f1f1f1;
-  padding-left: 20px;
-}
-
-/* Falsa Imagen */
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
+.profile-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
   padding: 20px;
 }
 
-/* Agregar un efecto de tarjeta para artículos */
-.card {
-  background-color: white;
+.profile-left {
+  flex: 1;
   padding: 20px;
-  margin-top: 20px;
+  background-color: #ffffff;
+  border-right: 1px solid #ddd;
 }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-  /*
-    La propiedad CSS clear especifica si un elemento puede estar al lado 
-    de elementos flotantes que lo preceden o si debe ser movido (cleared) 
-    debajo de ellos.
-    
-    */
+.profile-right {
+  flex: 2;
+  padding: 20px;
+  background-color: #ffffff;
 }
 
-/* Footer */
+.profile-info {
+  text-align: center;
+}
+
+.profile-info img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.profile-navigation ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+.profile-navigation ul li {
+  margin: 10px 0;
+}
+
+.profile-navigation ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.description, .posts {
+  margin-bottom: 20px;
+}
+
+.post-card {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
 .footer {
   padding: 20px;
   text-align: center;
-  background: #ddd;
-  margin-top: 20px;
-}
-
-/* Responsive layout - cuando la pantalla tiene menos de 800 px de ancho, hace que las dos columnas se apilen una encima de la otra en lugar de una al lado de la otra */
-@media screen and (max-width: 800px) {
-  .leftcolumn,
-  .rightcolumn {
-    width: 100%;
-    padding: 0;
-  }
-}
-
-/* Responsive layout - cuando la pantalla tiene menos de 400 px de ancho, hace que los enlaces de navegación se apilen uno encima del otro en lugar de uno al lado del otro */
-@media screen and (max-width: 400px) {
-  .topnav a {
-    float: none;
-    width: 100%;
-  }
-}
-
-/* ******   M E N U   ********* */
-/* Aplicar estilo a la barra de navegación superior */
-/* Cambiar de color al pasar el mouse */
-.topnav a:hover {
-  background-color: rgb(221, 221, 221);
-  color: black;
-}
-
-/* Aplicar estilo a los enlaces de topnav */
-.a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+  background-color: #ddd;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }

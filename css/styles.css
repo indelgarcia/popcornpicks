@@ -1,110 +1,76 @@
-/* General Styles */
+/* General Styles - Shared Across Pages */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
 }
 
-.container {
-  display: grid;
-  grid-template-columns: 200px 1fr 300px;
-  height: 100vh;
-  overflow: hidden;
+button, input, select, textarea {
+    font-family: inherit;
 }
 
-header {
-  padding: 20px;
-  background-color: rgb(248, 60, 60);
-  color: white;
-  text-align: center;
+p, h2, h3 {
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
-/* Sidebar Styles */
-.sidebar {
-  background-color: whitesmoke;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  height: auto;
-}
-#searchbar {
-  padding: 10px;
-  border: 2px solid #ccc;
-  border-radius: 100px; /* Ajusta el radio de los bordes según sea necesario */
-  outline: none; /* Elimina el borde de enfoque predeterminado del navegador */
-  font-size: 16px;
-  width: 300px; /* Ajusta el ancho de la barra de búsqueda */
+a {
+    text-decoration: none;
+    color: #ffcc00; /* Updated to match button color */
 }
 
-.logo-img {
-  width: 100px;
-  margin-bottom: 20px;
+/* Shared Button Styles */
+.button {
+    background-color: #ffcc00;
+    color: #333;
+    border: none;
+    padding: 12px 20px; /* Increased padding for better interaction */
+    border-radius: 5px; /* Slightly rounded corners */
+    cursor: pointer;
+    font-size: 18px; /* Slightly larger text */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
 }
 
-.menu ul {
-  list-style-type: none;
-  padding: 0;
+.button:hover {
+    background-color: #ff9900;
 }
 
-.menu ul li {
-  margin-bottom: 10px;
-  padding: 10px;
-  background-color: rgb(248, 60, 60);
-  cursor: pointer;
-  border-radius: 60px;
-  text-align: center;
-  color: #ddd;
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #ddd;
 }
 
-.menu ul li:hover {
-  background-color: #ff7d7d;
+/* Input Fields */
+.input-group input, #searchbar {
+    padding: 12px; /* Increased padding for input fields */
+    border: 2px solid #ccc;
+    border-radius: 5px; /* Slightly rounded corners */
+    outline: none;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 15px; /* Added space between input fields */
 }
 
-/* Feed Styles */
-.feed {
-  overflow-y: auto;
-  padding: 20px;
-  background-color: white;
+/* Centered Containers */
+.centered-container {
+    background-color: #ffffff;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    text-align: center;
+    margin: 60px auto auto auto; /* Added top margin to lower the position */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.picks-for-you {
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 5px;
-}
-
-.review {
-  background-color: #ddd;
-  padding: 10px;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
-
-.review:hover {
-  background-color: #ccc;
-}
-
-/* News Styles */
-.news {
-  background-color: white;
-  padding: 20px;
-  overflow-y: auto;
-}
-
-.new-movies {
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 5px;
-}
-
-.movie {
-  background-color: #ddd;
-  padding: 10px;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
-
-.movie:hover {
-  background-color: #ccc;
+.logo img {
+    width: 120px;
+    margin-bottom: 30px;
 }
