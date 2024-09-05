@@ -1,164 +1,260 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
 
 .container {
     display: grid;
-    grid-template-columns: 250px 1fr 300px;
+    grid-template-columns: 200px 1fr 350px;
     height: 100vh;
     overflow: hidden;
-}
-
-header {
+ }
+  
+ header {
     padding: 20px;
     background-color: rgb(248, 60, 60);
     color: white;
     text-align: center;
-}
-
-#searchbar {
-    padding: 10px;
-    border: 2px solid #ccc;
+    font-family: 'Raleway', sans-serif;
+ }
+  
+ #searchbar {
     border-radius: 100px;
-    outline: none;
-    font-size: 16px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.sidebar-container {
-    background-color: #ddd;
-    height: 100%;
+ }
+  
+ .sidebar-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-}
-
-.sidebar {
-    background-color: whitesmoke;
-    display: flex;
+ }
+  
+ .sidebar {
+    background-color: rgb(227, 11, 26);
     flex-direction: column;
-    align-items: center;
-    justify-content: center; /* Center content vertically */
     padding: 20px;
-    height: 100%;
-    box-sizing: border-box;
     position: relative;
-    left: 0;
-}
-
-.sidebar .logo-img {
+ }
+  
+ .sidebar .logo-img {
     width: 80%;
-    margin-bottom: 20px;
-}
-
-.sidebar .menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start; /* Keep menu items at the top */
-    flex-grow: 1;
-    margin-top: -10px; /* Adjust to center vertically with the logo */
-}
-
-.sidebar .menu ul {
+    margin: 0 auto 20px auto; /* Centra horizontalmente el logo y añade margen inferior */
+    display: block; /* Asegura que el logo sea un bloque para poder centrarlo */
+ }
+  
+ .sidebar .menu {
+    margin-top: 30px;
+ }
+  
+ .sidebar .menu ul {
     list-style-type: none;
     padding: 0;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.sidebar .menu ul li {
+ }
+  
+ .sidebar .menu ul li {
     margin-bottom: 15px;
     padding: 10px;
-    background-color: rgb(248, 60, 60);
+    background-color: whitesmoke;
     cursor: pointer;
     border-radius: 15px;
-    text-align: center;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 100%;
     max-width: 150px; /* Ensure buttons aren't too wide */
-}
-
-.sidebar .menu ul li a {
+ }
+  
+ .sidebar .menu ul li a {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
-    text-decoration: none;
+    color: black;
     font-weight: bold;
-    width: 100%;
-}
-
-.sidebar .menu ul li a .icon {
+ }
+  
+ .sidebar .menu ul li a .icon {
     font-size: 18px;
     margin-right: 10px;
-}
-
-.sidebar .menu ul li a .text {
-    display: inline;
-    width: auto;
-}
-
-.sidebar .menu ul li:hover {
+ }
+  
+  
+ .sidebar .menu ul li:hover {
     background-color: #ff7d7d;
-}
-
-.feed, .news {
+ }
+  
+ .feed {
     overflow-y: auto;
     padding: 20px;
     background-color: white;
-}
-
-.picks-for-you {
+ }
+  
+ .picks-for-you {
     margin-top: 20px;
+    text-align: center; /* Centra el título y el contenido de la cuadrícula */
+ }
+  
+ .title {
+    margin-bottom: 20px; /* Espacio entre el título y la cuadrícula */
+ }
+  
+ .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Ajusta automáticamente el número de columnas */
+    gap: 20px; /* Espacio entre los elementos de la cuadrícula */
+ }
+  
+ .grid-item {
+    position: relative; /* Necesario para posicionar la superposición y el botón */
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-}
-
-.card {
-    background-color: #ddd;
+    overflow: hidden; /* Asegura que el contenido no se desborde fuera del contenedor */
+ }
+  
+ .poster-container {
+    position: relative;
+    overflow: hidden; /* Asegura que la superposición y la imagen no se desborden fuera del contenedor */
+ }
+  
+ .grid-item img {
+    width: 100%; /* Ajusta la imagen al ancho del contenedor */
+    border-radius: 8px; /* Bordes redondeados */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Añade transiciones suaves para el efecto de opacidad y zoom */
+ }
+  
+ .grid-item:hover img {
+    opacity: 0.7; /* Oscurece la imagen al pasar el cursor */
+    transform: scale(1.05); /* Efecto de zoom en la imagen al pasar el cursor */
+ }
+  
+ .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Color de la superposición con opacidad */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* Oculta la superposición por defecto */
+    transition: opacity 0.3s ease; /* Transición suave para la aparición */
+ }
+  
+ .grid-item:hover .overlay {
+    opacity: 1; /* Muestra la superposición al pasar el cursor */
+ }
+  
+ .watchlist-btn {
+    background-color: #e60c0c; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border-color: white ;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 10%;
+ }
+  
+ .grid-item span {
+    margin-top: 8px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 5px 10px;
+    background-color: rgb(248, 60, 60);
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+ }
+  
+ .user-reviews {
+    width: 300px;
     padding: 20px;
-    margin: 10px 0;
-    border-radius: 8px;
-}
-
-@media screen and (max-width: 1200px) {
+  }
+  
+  .user-reviews-section h2 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .review-card {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user-info {
+    display: flex;
+    flex-direction: column; /* Aligns elements vertically */
+    align-items: flex-start; /* Aligns items to the left */
+    margin-bottom: 10px;
+  }
+  
+  .profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+  }
+  
+  .username {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px; /* Add some space between username and movie title */
+  }
+  
+  .username span {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  
+  .verified-tick {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .user-review p {
+    font-size: 0.9em;
+  }
+  
+  .movie-title {
+    color: #777;
+  }
+  
+  #bottom-text {
+    font-weight: lighter;
+  }
+  
+  #disclaimer {
+    font-size: smaller;
+    color: #777;
+  }
+  
+  
+ @media screen and (max-width: 1200px) {
     .container {
         grid-template-columns: 150px 1fr 200px;
     }
-}
-
-@media screen and (max-width: 800px) {
+ }
+  
+ @media screen and (max-width: 800px) {
     .container {
         grid-template-columns: 80px 1fr;
     }
-
+  
     .sidebar .logo-img {
         display: none;
     }
-
+  
     .news {
         display: none;
     }
-}
-
-@media screen and (max-width: 600px) {
+ }
+  
+ @media screen and (max-width: 600px) {
     .container {
         grid-template-columns: 1fr;
     }
-
+  
     .sidebar-container {
         display: none;
     }
-}
+ }
+  
