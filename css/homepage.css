@@ -1,11 +1,3 @@
-
-.container {
-    display: grid;
-    grid-template-columns: 200px 1fr 350px;
-    height: 100vh;
-    overflow: hidden;
- }
-  
  header {
     padding: 20px;
     background-color: rgb(248, 60, 60);
@@ -16,65 +8,6 @@
   
  #searchbar {
     border-radius: 100px;
- }
-  
- .sidebar-container {
-    display: flex;
-    justify-content: center;
- }
-  
- .sidebar {
-    background-color: rgb(227, 11, 26);
-    flex-direction: column;
-    padding: 20px;
-    position: relative;
- }
-  
- .sidebar .logo-img {
-    width: 80%;
-    margin: 0 auto 20px auto; /* Centra horizontalmente el logo y añade margen inferior */
-    display: block; /* Asegura que el logo sea un bloque para poder centrarlo */
- }
-  
- .sidebar .menu {
-    margin-top: 30px;
- }
-  
- .sidebar .menu ul {
-    list-style-type: none;
-    padding: 0;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
- }
-  
- .sidebar .menu ul li {
-    margin-bottom: 15px;
-    padding: 10px;
-    background-color: whitesmoke;
-    cursor: pointer;
-    border-radius: 15px;
-    width: 100%;
-    max-width: 150px; /* Ensure buttons aren't too wide */
- }
-  
- .sidebar .menu ul li a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: black;
-    font-weight: bold;
- }
-  
- .sidebar .menu ul li a .icon {
-    font-size: 18px;
-    margin-right: 10px;
- }
-  
-  
- .sidebar .menu ul li:hover {
-    background-color: #ff7d7d;
  }
   
  .feed {

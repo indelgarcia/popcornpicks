@@ -6,28 +6,17 @@
    <title>PopcornPicks</title>
    <link rel="stylesheet" href="css/homepage.css" />
    <link rel="stylesheet" href="css/styles.css" />
+   <link rel="stylesheet" href="css/left_sidebar.css" />
    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
  
  
  </head>
  <body>
    <div class="container">
-     <div class="sidebar-container" id="sidebar-container">
-       <aside class="sidebar" id="sidebar">
-         <div class="logo">
-           <img src="https://i.pinimg.com/736x/86/09/8b/86098b7d7d9439f6ee62c6d9615e3a39.jpg" alt="Logo" class="logo-img">
-         </div>
-         <nav class="menu">
-           <ul>
-             <li><a href="login.html"><span class="icon">🔑</span><span class="text">Login</span></a></li>
-             <li><a href="profile.html"><span class="icon">👤</span><span class="text">Profile</span></a></li>
-             <li><a href="movie_discussion.html"><span class="icon">⭐</span><span class="text">Movie Discussion</span></a></li>
-             <li><a href="watchlist.html"><span class="icon">📺</span><span class="text">Watchlist</span></a></li>
-           </ul>
-         </nav>
-       </aside>
-     </div>
- 
+    <!-- Sidebar Container (Will be filled dynamically by JS) -->
+    <div id="left-sidebar"></div>
+    <script src="js/left_sidebar.js"></script>
+
      <main class="feed" id="feed">
        <header>
          <h1>POPCORNPICKS</h1>

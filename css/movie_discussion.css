@@ -1,0 +1,177 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+button, input, select, textarea {
+    font-family: inherit;
+}
+
+/* Movie Discussion Page Specific Styles */
+.container {
+    display: grid;
+    grid-template-columns: 200px 1fr 350px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    padding: 20px;
+    background-color: rgb(248, 60, 60);
+    color: white;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Search Bar */
+#searchbar {
+    padding: 12px;
+    border-radius: 100px;
+    border: none;
+    width: 250px;
+    font-size: 16px;
+}
+
+/* Button Styles */
+.create-discussion-btn, .category-btn, .filter-btn {
+    background-color: #ffcc00;
+    color: #333;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.create-discussion-btn:hover, .category-btn:hover, .filter-btn:hover {
+    background-color: #ff9900;
+}
+
+/* Discussion Categories */
+.discussion-categories {
+    margin-bottom: 30px;
+}
+
+.discussion-categories h2 {
+    margin-bottom: 15px;
+}
+
+.discussion-categories ul {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+}
+
+/* Post Cards */
+.discussion-posts {
+    margin-bottom: 30px;
+}
+
+.post-card {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.post-header img {
+    width: 50px;
+    height: 75px;
+    border-radius: 5px;
+}
+
+.post-info h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.post-snippet {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.post-snippet a {
+    color: #ff9900;
+    text-decoration: none;
+}
+
+.post-snippet a:hover {
+    text-decoration: underline;
+}
+
+/* Right Sidebar */
+.sidebar-right {
+    padding: 20px;
+    background-color: #f4f4f4;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.trending-discussions h2,
+.discussion-filters h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.trending-discussions ul,
+.discussion-filters ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.trending-discussions ul li {
+    margin-bottom: 10px;
+}
+
+.trending-discussions ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.trending-discussions ul li a:hover {
+    color: #ff9900;
+    text-decoration: underline;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1200px) {
+    .container {
+        grid-template-columns: 150px 1fr 200px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .container {
+        grid-template-columns: 80px 1fr;
+    }
+
+    .sidebar .logo-img {
+        display: none;
+    }
+
+    .news {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar-container {
+        display: none;
+    }
+}

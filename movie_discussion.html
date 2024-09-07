@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Discussion - PopcornPicks</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/left_sidebar.css">
+    <link rel="stylesheet" href="css/movie_discussion.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Container (Will be filled dynamically by JS) -->
+        <div id="left-sidebar"></div>
+
+        <!-- Main Content -->
+        <main class="discussion-feed">
+            <header class="discussion-header">
+                <h1>Movie Discussion</h1>
+                <div class="header-actions">
+                    <button class="button create-discussion-btn">Create Discussion</button>
+                    <input type="text" name="search" id="searchbar" placeholder="Search Discussions...">
+                </div>
+            </header>
+
+            <!-- Discussion Categories -->
+            <section class="discussion-categories">
+                <h2>Discussion Categories</h2>
+                <ul>
+                    <li><button class="category-btn">Action</button></li>
+                    <li><button class="category-btn">Drama</button></li>
+                    <li><button class="category-btn">Comedy</button></li>
+                    <li><button class="category-btn">Thriller</button></li>
+                    <li><button class="category-btn">Classics</button></li>
+                </ul>
+            </section>
+
+            <!-- Discussion Posts -->
+            <section class="discussion-posts">
+                <h2>Recent Discussions</h2>
+                <div class="post-card">
+                    <div class="post-header">
+                        <img src="https://i.pinimg.com/736x/86/09/8b/86098b7d7d9439f6ee62c6d9615e3a39.jpg" alt="Movie Poster">
+                        <div class="post-info">
+                            <h3>Let's Discuss: The Shawshank Redemption</h3>
+                            <p>Started by <strong>John Doe</strong> - 15 comments</p>
+                        </div>
+                    </div>
+                    <p class="post-snippet">What are your thoughts on the iconic ending? Did it live up to the expectations?... <a href="#">Continue Reading</a></p>
+                </div>
+
+                <div class="post-card">
+                    <div class="post-header">
+                        <img src="https://i.pinimg.com/736x/86/09/8b/86098b7d7d9439f6ee62c6d9615e3a39.jpg" alt="Movie Poster">
+                        <div class="post-info">
+                            <h3>Best Christopher Nolan Movie?</h3>
+                            <p>Started by <strong>Jane Smith</strong> - 22 comments</p>
+                        </div>
+                    </div>
+                    <p class="post-snippet">Is Inception better than The Dark Knight? Let's dive into the debate!... <a href="#">Continue Reading</a></p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Right Sidebar -->
+        <aside class="sidebar-right">
+            <section class="trending-discussions">
+                <h2>Trending Discussions</h2>
+                <ul>
+                    <li><a href="#">Avatar: Was it Worth the Wait?</a></li>
+                    <li><a href="#">Oscar Predictions 2024</a></li>
+                    <li><a href="#">Marvel Phase 5 Speculation</a></li>
+                </ul>
+            </section>
+
+            <section class="discussion-filters">
+                <h2>Filter Discussions</h2>
+                <button class="filter-btn">Most Recent</button>
+                <button class="filter-btn">Most Commented</button>
+                <button class="filter-btn">Most Upvoted</button>
+            </section>
+        </aside>
+    </div>
+
+    <!-- Include sidebar.js to load the sidebar -->
+    <script src="js/left_sidebar.js"></script>
+</body>
+</html>
