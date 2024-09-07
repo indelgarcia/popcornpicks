@@ -1,7 +1,7 @@
 // Load sidebar dynamically
 document.addEventListener('DOMContentLoaded', () => {
     const sidebarContainer = document.getElementById('left-sidebar');
-    fetch('sidebar.html')
+    fetch('left_sidebar.html')
       .then(response => response.text())
       .then(data => {
         sidebarContainer.innerHTML = data;
