@@ -52,6 +52,15 @@ header {
     gap: 20px;
 }
 
+#searchbar {
+    border-radius: 100px;
+    width: 60%;  /* Slightly smaller width */
+    margin-top: 20px; /* Keep it spaced similarly */
+    padding: 15px;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ }
+
 /* New Post Watchlist Button */
 .post-watchlist-btn {
     background-color: #ffcc00;

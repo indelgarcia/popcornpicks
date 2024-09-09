@@ -44,17 +44,6 @@ a {
     background-color: #ddd;
 }
 
-/* Input Fields */
-.input-group input, #searchbar{
-    padding: 12px; /* Increased padding for input fields */
-    border: 2px solid #ccc;
-    border-radius: 5px; /* Slightly rounded corners */
-    outline: none;
-    font-size: 16px;
-    width: 100%;
-    box-sizing: border-box;
-    margin-bottom: 15px; /* Added space between input fields */
-}
 
 /* Centered Containers */
 .centered-container {
@@ -68,6 +57,20 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+/* Centered Containers */
+.centered-container__login {
+    background-color: #ffffff;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    text-align: center;
+    margin: 60px auto auto auto; /* Added top margin to lower the position */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .logo img {
