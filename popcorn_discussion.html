@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popcorn Discussions</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/left_sidebar.css">
+    <link rel="stylesheet" href="css/popcorn_discussion.css">
+</head>
+<body>
+    <div class="container">
+        <div id="left-sidebar"></div>
+        <script src="js/left_sidebar.js"></script>
+
+        <!-- Main Content -->
+        <main class="header discussion-feed">
+            <header>
+                <h1>Popcorn Discussion</h1>
+                <div class="top-bar">
+                    <input type="text" name="search" id="searchbar" placeholder="Search your movie...">
+                    <button class="new-post-btn">+ Post</button> <!-- New Post Button -->
+                </div>
+            </header>
+
+            <!-- Filter Section -->
+            <div class="filter-section">
+                <!-- Single-select Discussion Filters dropdown -->
+                <div class="dropdown">
+                    <button class="filter-btn">Discussion Filters</button>
+                    <div class="dropdown-content single-select">
+                        <label><input type="radio" name="discussion-filter" value="Most Recent"> Most Recent</label>
+                        <label><input type="radio" name="discussion-filter" value="Hot"> Hot</label>
+                        <label><input type="radio" name="discussion-filter" value="Rising"> Rising</label>
+                        <label><input type="radio" name="discussion-filter" value="Popular All Time"> Popular All Time</label>
+                    </div>
+                </div>
+
+                <!-- Multi-select Genres dropdown -->
+                <div class="dropdown">
+                    <button class="filter-btn">Genres</button>
+                    <div class="dropdown-content multi-select">
+                        <label><input type="checkbox" value="Action"> Action</label>
+                        <label><input type="checkbox" value="Drama"> Drama</label>
+                        <label><input type="checkbox" value="Comedy"> Comedy</label>
+                        <label><input type="checkbox" value="Thriller"> Thriller</label>
+                        <label><input type="checkbox" value="Classics"> Classics</label>
+                        <label><input type="checkbox" value="Sci-Fi"> Sci-Fi</label>
+                        <label><input type="checkbox" value="Romance"> Romance</label>
+                        <label><input type="checkbox" value="Fantasy"> Fantasy</label>
+                        <label><input type="checkbox" value="Documentary"> Documentary</label>
+                        <label><input type="checkbox" value="Horror"> Horror</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Discussion Posts -->
+            <section class="discussion-posts">
+                <h2>Recent Discussions (Showing 2 of 2)</h2>
+                <div class="post-card" onclick="openPost()"> <!-- Add onclick to open discussion -->
+                    <div class="post-header">
+                        <img src="https://i.pinimg.com/736x/86/09/8b/86098b7d7d9439f6ee62c6d9615e3a39.jpg" alt="Movie Poster">
+                        <div class="post-info">
+                            <h3>Let's Discuss: The Shawshank Redemption</h3>
+                            <p>Started by <strong>John Doe</strong> - 15 comments</p>
+                        </div>
+                    </div>
+                    <p class="post-snippet">What are your thoughts on the iconic ending? Did it live up to the expectations?... <a href="#">Continue Reading</a></p>
+                </div>
+
+                <div class="post-card" onclick="openPost()"> <!-- Add onclick to open discussion -->
+                    <div class="post-header">
+                        <img src="https://i.pinimg.com/736x/86/09/8b/86098b7d7d9439f6ee62c6d9615e3a39.jpg" alt="Movie Poster">
+                        <div class="post-info">
+                            <h3>Best Christopher Nolan Movie?</h3>
+                            <p>Started by <strong>Jane Smith</strong> - 22 comments</p>
+                        </div>
+                    </div>
+                    <p class="post-snippet">Is Inception better than The Dark Knight? Let's dive into the debate!... <a href="#">Continue Reading</a></p>
+                </div>
+            </section>
+
+            <!-- Pagination (if needed in the future) -->
+            <div class="pagination">
+                <button class="page-btn" disabled>Previous</button>
+                <button class="page-btn">Next</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/discussion.js"></script>
+
+</body>
+</html>

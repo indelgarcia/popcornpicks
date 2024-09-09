@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popcorn Reviews</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/left_sidebar.css">
+    <link rel="stylesheet" href="css/popcorn_reviews.css">
+</head>
+<body>
+    <div class="container">
+        <div id="left-sidebar"></div>
+        <script src="js/left_sidebar.js"></script>
+
+        <!-- Main Content -->
+        <main class="header review-feed">
+            <header>
+                <h1>Popcorn Reviews</h1>
+                <div class="top-bar">
+                    <input type="text" name="search" id="searchbar" placeholder="Search your movie...">
+                    <button class="new-review-btn">+ Write a Review</button> <!-- New Review Button -->
+                </div>
+
+                <!-- View Switcher -->
+                <div class="view-switcher">
+                    <button class="view-btn active" id="verified-reviews-btn">Verified Reviews</button>
+                    <button class="view-btn" id="movie-reviews-btn">Movies with Reviews</button>
+                </div>
+            </header>
+
+            <!-- Filter Section for Verified Reviews -->
+            <div class="filter-section" id="review-filters">
+                <!-- Sorting Options -->
+                <div class="dropdown">
+                    <button class="filter-btn">Sort Reviews</button>
+                    <div class="dropdown-content single-select">
+                        <label><input type="radio" name="sort-filter" value="Most Recent"> Most Recent</label>
+                        <label><input type="radio" name="sort-filter" value="Highest Rated"> Highest Rated</label>
+                        <label><input type="radio" name="sort-filter" value="Most Popular"> Most Popular</label>
+                    </div>
+                </div>
+
+                <!-- Multi-select Genre Filters -->
+                <div class="dropdown">
+                    <button class="filter-btn">Genres</button>
+                    <div class="dropdown-content multi-select">
+                        <label><input type="checkbox" value="Action"> Action</label>
+                        <label><input type="checkbox" value="Drama"> Drama</label>
+                        <label><input type="checkbox" value="Comedy"> Comedy</label>
+                        <label><input type="checkbox" value="Thriller"> Thriller</label>
+                        <label><input type="checkbox" value="Classics"> Classics</label>
+                        <label><input type="checkbox" value="Sci-Fi"> Sci-Fi</label>
+                        <label><input type="checkbox" value="Romance"> Romance</label>
+                        <label><input type="checkbox" value="Fantasy"> Fantasy</label>
+                        <label><input type="checkbox" value="Documentary"> Documentary</label>
+                        <label><input type="checkbox" value="Horror"> Horror</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Verified Reviews (Default View) -->
+            <section class="review-posts" id="verified-reviews-view">
+                <h2>Verified Reviews</h2>
+                <div class="review-card" onclick="openReview()">
+                    <div class="review-header">
+                        <img src="https://via.placeholder.com/50" alt="Critic Avatar">
+                        <div class="review-info">
+                            <h3>Critic Review: The Shawshank Redemption</h3>
+                            <p>Rating: <strong>4.5/5</strong> | Critic: <strong>John Doe</strong></p>
+                        </div>
+                    </div>
+                    <p class="review-snippet">A timeless masterpiece. The storyline, acting, and overall presentation is phenomenal... <a href="#">Continue Reading</a></p>
+                </div>
+
+                <div class="review-card" onclick="openReview()">
+                    <div class="review-header">
+                        <img src="https://via.placeholder.com/50" alt="Audience Avatar">
+                        <div class="review-info">
+                            <h3>Audience Review: Inception</h3>
+                            <p>Rating: <strong>5/5</strong> | Audience: <strong>Jane Smith</strong></p>
+                        </div>
+                    </div>
+                    <p class="review-snippet">Inception is a cinematic marvel that keeps you on the edge of your seat from start to finish... <a href="#">Continue Reading</a></p>
+                </div>
+            </section>
+
+            <!-- Movie-Specific Reviews (Hidden by Default) -->
+            <section class="movie-posts" id="movie-reviews-view" style="display: none;">
+                <h2>Movies with Reviews</h2>
+                <div class="movie-card" onclick="openMovieReviews()">
+                    <img src="https://i.ebayimg.com/images/g/ag4AAOSw4CFY3NZF/s-l400.jpg" alt="Movie Poster">
+                    <div class="movie-info">
+                        <h3>The Shawshank Redemption</h3>
+                        <p>Avg Rating: <strong>4.5/5</strong></p>
+                    </div>
+                </div>
+
+                <div class="movie-card" onclick="openMovieReviews()">
+                    <img src="https://play-lh.googleusercontent.com/buKf27Hxendp3tLNpNtP3E-amP0o4yYV-SGKyS2u-Y3GdGRTyfNCIT5WAVs2OudOz6so5K1jtYdAUKI9nw8" alt="Movie Poster">
+                    <div class="movie-info">
+                        <h3>Inception</h3>
+                        <p>Avg Rating: <strong>5/5</strong></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pagination (if needed in the future) -->
+            <div class="pagination">
+                <button class="page-btn" disabled>Previous</button>
+                <button class="page-btn">Next</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/reviews.js"></script>
+</body>
+</html>

@@ -1,14 +1,23 @@
  header {
-    padding: 20px;
-    background-color: rgb(248, 60, 60);
-    color: white;
-    text-align: center;
-    font-family: 'Raleway', sans-serif;
+   padding: 40px 20px; /* Adds padding around the text */
+   background-color: rgb(248, 60, 60);
+   color: white;
+   text-align: center;
+   font-family: 'Raleway', sans-serif;
+   margin-bottom: 20px;
+   margin: 20px; /* Adds white space (margins) around the header */
+   border-radius: 10px; /* Rounds the edges of the header */
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow to separate the sections */
  }
-  
+
  #searchbar {
-    border-radius: 100px;
- }
+   border-radius: 100px;
+   width: 80%;  /* Match the width with the homepage */
+   margin-top: 20px; /* Keep it spaced similarly */
+   padding: 15px;
+   border: none;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
   
  .feed {
     overflow-y: auto;
@@ -189,5 +198,5 @@
     .sidebar-container {
         display: none;
     }
- }
+}
   
