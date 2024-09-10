@@ -9,30 +9,11 @@
     <link rel="stylesheet" href="css/left_sidebar.css"/>
   </head>
   <body>
-    <div class="container_login">
-      <div class="sidebar-container" id="sidebar-container">
-        <aside class="sidebar" id="sidebar">
-          <div class="logo">
-            <!-- Logo now links to index.html -->
-            <a href="index.html">
-              <img src="https://i.pinimg.com/736x/86/09/8b/86098b7d7d9439f6ee62c6d9615e3a39.jpg" alt="Logo" class="logo-img">
-            </a>
-          </div>
-          <nav class="menu">
-            <ul>
-              <li><a href="login.html"><span class="icon">🔑</span><span class="text">Login</span></a></li>
-              <li><a href="profile.html"><span class="icon">👤</span><span class="text">Profile</span></a></li>
-              <li><a href="popcorn_reviews.html"><span class="icon">⭐️</span><span class="text">Popcorn Reviews</span></a></li>
-              <li><a href="popcorn_discussion.html"><span class="icon">🍿</span><span class="text">Popcorn Discussion</span></a></li>
-              <li><a href="watchlist.html"><span class="icon">📺</span><span class="text">Watchlist</span></a></li>
-            </ul>
-          </nav>
-        </aside>
-      </div>
+    <div class="container-2-column">
+      <div id="left-sidebar"></div>
+      <script src="js/left_sidebar.js"></script>
     </div>
-    
-    </div> 
-    
+
     <div class="centered-container login-container">
       <div class="logo">
         <img
@@ -40,9 +21,6 @@
           alt="Popcorn Picks Logo"
         />
       </div>
-
-      
-
 
       <h2>Login to Popcorn Picks</h2>
       <form action="/login" method="POST">

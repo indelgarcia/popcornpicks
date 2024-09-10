@@ -10,16 +10,6 @@
    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow to separate the sections */
  }
 
- /* #searchbar {
-   border-radius: 100px;
-   width: 80%;  
-   margin-top: 20px; 
-   padding: 15px;
-   border: none;
-   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-} 
-*/
-
 #searchbar {
    border-radius: 100px;
    width: 60%;  /* Slightly smaller width */
@@ -29,8 +19,6 @@
    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-
-  
  .feed {
     overflow-y: auto;
     padding: 20px;

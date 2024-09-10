@@ -8,12 +8,6 @@ body {
   margin: 0;
 }
 
-.container {
-  display: grid;
-  height: 100vh;
-  overflow: hidden;
-}
-
 .login-container {
   background-color: #ffffff;
   padding: 20px;

@@ -10,13 +10,6 @@ button, input, select, textarea {
     font-family: inherit;
 }
 
-.container {
-    display: grid;
-
-    height: 100vh;
-    overflow: hidden;
- } 
-
 /* Consistent Header Styles */
 header {
     padding: 40px 20px;

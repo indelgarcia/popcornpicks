@@ -22,14 +22,6 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Container Layout */
-.container {
-    display: grid;
-    grid-template-columns: 200px 1fr; /* Sidebar and main content */
-    height: 100vh; /* Full viewport height */
-    overflow: hidden;
-}
-
 /* Sidebar should remain fixed */
 #left-sidebar {
     height: 100vh; /* Full viewport height for sidebar */

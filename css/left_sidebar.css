@@ -1,19 +1,7 @@
-.container {
-    display: grid;
-    grid-template-columns: 200px 1fr 350px;
-    height: 100vh;
-    overflow: hidden;
- } 
-
-.container_login {
-    display: grid;
-    height: 100vh;
-    overflow: hidden;
-}
-
 .sidebar-container {
     display: flex;
     justify-content: center;
+    height: 100vh;
   }
   
   .sidebar {

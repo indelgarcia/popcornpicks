@@ -44,6 +44,19 @@ a {
     background-color: #ddd;
 }
 
+.container-3-column {
+    display: grid;
+    grid-template-columns: 200px 1fr 350px;
+    height: 100vh;
+    overflow: hidden;
+ } 
+
+ .container-2-column {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  height: 100vh;
+  overflow: hidden;
+} 
 
 /* Centered Containers */
 .centered-container {
