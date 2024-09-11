@@ -1,127 +1,170 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- Para que se active el modo responsive -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Relaciona o enlaza este archivo html con el 03.css-->
-    <link rel="stylesheet" href="css/profile.css" />
-    <title>Document</title>
-  </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Profile - PopcornPicks</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/left_sidebar.css">
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+    <div class="container-2-column">
+        <div id="left-sidebar"></div>
+        <script src="js/left_sidebar.js"></script>
+
+        <!-- Main Content -->
+        <main class="header profile-feed">
+            <!-- Consistent Header -->
+            <header class="page-header">
+                <h1>Your Profile</h1>
+                <div class="top-bar">
+                    <input type="text" name="search" id="searchbar" placeholder="Search your profile...">
+                    <button class="edit-profile-btn">Edit Profile</button>
+                </div>
+            </header>
+
+            <!-- Profile Information -->
+            <section class="profile-header">
+                <div class="profile-info">
+                    <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-pic">
+                    <div class="user-details">
+                        <h2>Username</h2>
+                        <p>Member since: January 2024</p>
+                        <p class="bio">This is your bio. Share something about yourself here!</p>
+                        <button class="settings-btn">Settings</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Profile Navigation Tabs -->
+            <nav class="profile-nav">
+                <ul>
+                    <li class="active"><a href="#your-reviews">Your Reviews</a></li>
+                    <li><a href="#your-watchlist">Your Watchlist</a></li>
+                    <li><a href="#your-activity">Your Activity</a></li>
+                    <li><a href="#friends">Friends</a></li>
+                </ul>
+            </nav>
+
+            <!-- Your Reviews Section -->
+            <section class="reviews-section" id="your-reviews">
+              <h2>Your Reviews</h2>
+              <div class="review-card" onclick="openReview()">
+                  <div class="review-header">
+                      <img src="https://via.placeholder.com/50" alt="Movie Poster">
+                      <div class="review-info">
+                          <h3>Your Review: La La Land</h3>
+                          <p>Rating: <strong>5/5</strong> | Your Rating</p>
+                      </div>
+                  </div>
+                  <p class="review-snippet">Loved the cinematography and the emotional depth of the characters! <a href="#">Continue Reading</a></p>
+              </div>
+
+              <div class="review-card" onclick="openReview()">
+                  <div class="review-header">
+                      <img src="https://via.placeholder.com/50" alt="Movie Poster">
+                      <div class="review-info">
+                          <h3>Your Review: 1917</h3>
+                          <p>Rating: <strong>4/5</strong> | Your Rating</p>
+                      </div>
+                  </div>
+                  <p class="review-snippet">Beautifully shot, but a little slow-paced for my taste. <a href="#">Continue Reading</a></p>
+              </div>
+            </section>
 
 
-  <body>
-    <header>
-      <div class="box">
-        <div class="he-izq">
-          <img src="https://cdn-icons-png.flaticon.com/512/3106/3106921.png"
-          alt="loading..." class="foto-p">
-          <h2>username</h2>
-          <p>joined in....</p>
-        </div>
-        <div class="he-der">
-          <h3>Descripcion</h3>
-          <p>Esto es una descripcion re copada</p>
-        </div>
-        <a href="index.html">Home</a>
-      </div>
-    </header>
-    <div class="row">
-      <div class="leftcolumn">
-        <div class="card1">
-          <h2>Reviews</h2>
-        </div>
-        <div class="card">
-          <h2>Movie name</h2>
-          <h5>username, date(dd/mm/yy)</h5>
-          <div class="fakeimg" style="height: 200px">Image</div>
-          <span class="fa fa-star checked">X</span>
-          <span class="fa fa-star checked">X</span>
-          <span class="fa fa-star checked">X</span>
-          <span class="fa fa-star">X</span>
-          <span class="fa fa-star">X</span>
-          <p>User review shown here</p>
-        </div>
-        <div class="card">
-          <h2>Movie name</h2>
-          <h5>username, date(dd/mm/yy)</h5>
-          <div class="fakeimg" style="height: 200px">Image</div>
-          <span class="fa fa-star checked">X</span>
-          <span class="fa fa-star checked">X</span>
-          <span class="fa fa-star checked">X</span>
-          <span class="fa fa-star checked">X</span>
-          <span class="fa fa-star">X</span>
-          <p>User review shown here</p>
-        </div>
-        <div class="card">
-          <h2>Movie name</h2>
-          <h5>username, date(dd/mm/yy)</h5>
-          <div class="fakeimg" style="height: 200px">Image</div>
-          <span class="fa fa-star checked">X</span>
-          <span class="fa fa-star checked">X</span>
-          <span class="fa fa-star checked">X</span>
-          <span class="fa fa-star checked">X</span>
-          <span class="fa fa-star">X</span>
-          <p>User review shown here</p>
-        </div>
-        <div class="card">
-          <h2>Movie name</h2>
-          <h5>username, date(dd/mm/yy)</h5>
-          <div class="fakeimg" style="height: 200px">Image</div>
-          <span class="fa fa-star checked">X</span>
-          <span class="fa fa-star checked">X</span>
-          <span class="fa fa-star checked">X</span>
-          <span class="fa fa-star checked">X</span>
-          <span class="fa fa-star">X</span>
-          <p>User review shown here</p>
-        </div>
-      </div>
-      <div class="rightcolumn">
-        <div class="card1">
-          <h2>Watchlists</h2>
-        </div>
-        <div class="card">
-          <h3>Watchlist name</h3>
-          <h5>username, date(dd/mm/yy)</h5>
-          <div class="fakeimg">
-            <p>movie 1</p>
-          </div>
-          <div class="fakeimg">
-            <p>movie 2</p>
-          </div>
-          <div class="fakeimg">
-            <p>movie 3</p>
-          <p>+</p>
-          </div>
-        </div>
-        <div class="card">
-          <h3>Watchlist name</h3>
-          <h5>username, date(dd/mm/yy)</h5>
-          <div class="fakeimg">
-            <p>movie 1</p>
-          </div>
-          <div class="fakeimg">
-            <p>movie 2</p>
-          </div>
-          <div class="fakeimg">
-            <p>movie 3</p>
-            <p>+</p>
-          </div>
-        </div>
-        <div class="card">
-          <h3>Watchlist name</h3>
-          <h5>username, date(dd/mm/yy)</h5>
-          <div class="fakeimg">
-            <p>movie 1</p>
-          </div>
-          <div class="fakeimg">
-            <p>movie 2</p>
-          </div>
-          <div class="fakeimg">
-            <p>movie 3</p>
-          <p>+</p>
-        </div>
+            <!-- Your Watchlist Section -->
+            <section class="watchlist-section" id="your-watchlist">
+                <h2>Your Watchlist</h2>
+                <div class="watchlist-list">
+                    <div class="watchlist-item">
+                        <img src="https://via.placeholder.com/100" alt="Movie Poster" class="movie-poster">
+                        <div class="watchlist-info">
+                            <h3>Interstellar</h3>
+                            <p>Added on: July 2024</p>
+                            <a href="#">View Details</a>
+                        </div>
+                    </div>
+
+                    <div class="watchlist-item">
+                        <img src="https://via.placeholder.com/100" alt="Movie Poster" class="movie-poster">
+                        <div class="watchlist-info">
+                            <h3>Parasite</h3>
+                            <p>Added on: August 2024</p>
+                            <a href="#">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Your Activity Section -->
+            <section class="activity-section" id="your-activity">
+                <h2>Your Activity</h2>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <p><strong>John Doe</strong> added <strong>Interstellar</strong> to their watchlist.</p>
+                        <span class="activity-time">2 hours ago</span>
+                    </div>
+                    <div class="activity-item">
+                        <p><strong>John Doe</strong> reviewed <strong>La La Land</strong>.</p>
+                        <span class="activity-time">1 day ago</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Friends Section -->
+            <section class="friends-section" id="friends">
+                <h2>Friends</h2>
+                <div class="friends-list">
+                    <div class="friend-card">
+                        <img src="https://via.placeholder.com/50" alt="Friend Profile Picture" class="friend-pic">
+                        <span class="friend-name">Jane Smith</span>
+                        <button class="unfriend-btn">Unfriend</button>
+                    </div>
+                    <div class="friend-card">
+                        <img src="https://via.placeholder.com/50" alt="Friend Profile Picture" class="friend-pic">
+                        <span class="friend-name">Mike Johnson</span>
+                        <button class="unfriend-btn">Unfriend</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Edit Profile Modal -->
+            <div class="modal" id="settings-modal">
+                <div class="modal-content">
+                    <span class="close-button">&times;</span>
+                    <h2>Edit Profile</h2>
+                    <form>
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" value="Username">
+
+                        <label for="bio">Bio:</label>
+                        <textarea id="bio" name="bio">This is your bio. Share something about yourself here!</textarea>
+
+                        <label for="profile-pic">Profile Picture URL:</label>
+                        <input type="url" id="profile-pic" name="profile-pic" value="https://via.placeholder.com/150">
+
+                        <button type="submit">Save Changes</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- General Settings Modal -->
+            <div class="modal" id="general-settings-modal">
+                <div class="modal-content">
+                    <span class="close-button">&times;</span>
+                    <h2>General Settings</h2>
+                    <form>
+                        <label for="notifications">Notifications:</label>
+                        <input type="checkbox" id="notifications" name="notifications"> Enable Notifications
+                        <button type="submit">Save Changes</button>
+                    </form>
+                </div>
+            </div>
+        </main>
     </div>
-  </body>
+
+    <script src="js/profile.js"></script>
+</body>
 </html>
