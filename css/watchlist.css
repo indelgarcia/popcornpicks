@@ -238,10 +238,6 @@ header {
         grid-template-columns: 80px 1fr;
     }
 
-    .sidebar .logo-img {
-        display: none;
-    }
-
     .news {
         display: none;
     }
