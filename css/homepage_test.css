@@ -1,118 +1,154 @@
- header {
-   padding: 40px 20px; /* Adds padding around the text */
-   background-color: rgb(248, 60, 60);
-   color: white;
-   text-align: center;
-   font-family: 'Raleway', sans-serif;
-   margin-bottom: 20px;
-   margin: 20px; /* Adds white space (margins) around the header */
-   border-radius: 10px; /* Rounds the edges of the header */
-   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow to separate the sections */
- }
-
-#searchbar {
-   border-radius: 100px;
-   width: 60%;  /* Slightly smaller width */
-   margin-top: 20px; /* Keep it spaced similarly */
-   padding: 15px;
-   border: none;
-   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.container {
+    display: grid;
+    grid-template-columns: 200px 1fr 350px;
+    height: 100vh;
+    overflow: hidden;
 }
 
- .feed {
+header {
+    padding: 20px;
+    background-color: rgb(248, 60, 60);
+    color: white;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+#searchbar {
+    border-radius: 100px;
+}
+
+.sidebar-container {
+    display: flex;
+    justify-content: center;
+}
+
+.sidebar {
+    background-color: rgb(227, 11, 26);
+    flex-direction: column;
+    padding: 20px;
+    position: relative;
+}
+
+.sidebar .logo-img {
+    width: 80%;
+    margin: 0 auto 20px auto; /* Centra horizontalmente el logo y añade margen inferior */
+    display: block; /* Asegura que el logo sea un bloque para poder centrarlo */
+}
+
+.sidebar .menu {
+    margin-top: 30px;
+}
+
+.sidebar .menu ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar .menu ul li {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: whitesmoke;
+    cursor: pointer;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 150px; /* Ensure buttons aren't too wide */
+}
+
+.sidebar .menu ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-weight: bold;
+}
+
+.sidebar .menu ul li a .icon {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+
+.sidebar .menu ul li:hover {
+    background-color: #ff7d7d;
+}
+
+.feed {
     overflow-y: auto;
     padding: 20px;
     background-color: white;
- }
-  
- .picks-for-you {
+}
+
+.picks-for-you {
     margin-top: 20px;
     text-align: center; /* Centra el título y el contenido de la cuadrícula */
- }
-  
- .title {
+}
+
+.title {
     margin-bottom: 20px; /* Espacio entre el título y la cuadrícula */
- }
-  
- .grid-container {
+}
+
+.grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Ajusta automáticamente el número de columnas */
     gap: 20px; /* Espacio entre los elementos de la cuadrícula */
- }
-  
- .grid-item {
+}
+
+.grid-item {
     position: relative; /* Necesario para posicionar la superposición y el botón */
     display: flex;
     flex-direction: column;
     overflow: hidden; /* Asegura que el contenido no se desborde fuera del contenedor */
- }
-  
- .poster-container {
+}
+
+.poster-container {
     position: relative;
     overflow: hidden; /* Asegura que la superposición y la imagen no se desborden fuera del contenedor */
- }
-  
- .grid-item img {
+}
+
+.grid-item img {
     width: 100%; /* Ajusta la imagen al ancho del contenedor */
     border-radius: 8px; /* Bordes redondeados */
     transition: opacity 0.3s ease, transform 0.3s ease; /* Añade transiciones suaves para el efecto de opacidad y zoom */
- }
-  
- .grid-item:hover img {
+}
+
+.grid-item:hover img {
     opacity: 0.7; /* Oscurece la imagen al pasar el cursor */
     transform: scale(1.05); /* Efecto de zoom en la imagen al pasar el cursor */
- }
-  
- /* Overlay buttons styling */
+}
+
 .overlay {
-   position: absolute;
-   top: 0;
-   left: 0;
-   right: 0;
-   bottom: 0;
-   background-color: rgba(0, 0, 0, 0.5);
-   display: flex;
-   flex-direction: column; /* Arrange buttons in a column */
-   align-items: center;
-   justify-content: center;
-   opacity: 0;
-   transition: opacity 0.3s ease;
-   gap: 10px; /* Space between buttons */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Color de la superposición con opacidad */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* Oculta la superposición por defecto */
+    transition: opacity 0.3s ease; /* Transición suave para la aparición */
 }
 
 .grid-item:hover .overlay {
-   opacity: 1;
+    opacity: 1; /* Muestra la superposición al pasar el cursor */
 }
 
 .watchlist-btn {
-   background-color: #e60c0c;
-   color: white;
-   border-color: white;
-   padding: 10px 20px;
-   cursor: pointer;
-   font-size: 14px;
-   border-radius: 10%;
-   margin-bottom: 10px; /* Space below this button */
+    background-color: #e60c0c; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border-color: white ;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 10%;
 }
 
-/* New styles for "See Movie Details" button */
-.details-btn {
-   background-color: #ffcc00;
-   color: #333;
-   padding: 10px 20px;
-   cursor: pointer;
-   font-size: 14px;
-   border-radius: 10%;
-   text-decoration: none; /* Remove underline */
-   text-align: center;
-   transition: background-color 0.3s ease;
-}
-
-.details-btn:hover {
-   background-color: #ff9900;
-}
-  
- .grid-item span {
+.grid-item span {
     margin-top: 8px;
     font-weight: bold;
     color: white;
@@ -123,18 +159,18 @@
     background-color: rgb(248, 60, 60);
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
- }
-  
- .user-reviews {
+}
+
+.user-reviews {
     width: 300px;
     padding: 20px;
   }
-  
+ 
   .user-reviews-section h2 {
     margin-bottom: 20px;
     text-align: center;
   }
-  
+ 
   .review-card {
     background-color: #ffffff;
     padding: 15px;
@@ -142,82 +178,92 @@
     margin-bottom: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
-  
+ 
   .user-info {
     display: flex;
     flex-direction: column; /* Aligns elements vertically */
     align-items: flex-start; /* Aligns items to the left */
     margin-bottom: 10px;
   }
-  
+ 
   .profile-pic {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     margin-bottom: 5px;
   }
-  
+ 
   .username {
     display: flex;
     align-items: center;
     margin-bottom: 5px; /* Add some space between username and movie title */
   }
-  
+ 
   .username span {
     font-weight: bold;
     margin-right: 5px;
   }
-  
+ 
   .verified-tick {
     width: 20px;
     height: 20px;
   }
-  
+ 
   .user-review p {
     font-size: 0.9em;
   }
-  
+
   .movie-title {
     color: #777;
   }
-  
+
   #bottom-text {
-    font-weight: lighter;
+    font-weight: bold;
   }
-  
+
   #disclaimer {
     font-size: smaller;
     color: #777;
   }
-  
-  
- @media screen and (max-width: 1200px) {
+
+  at {
+    color: #e60c0c;
+    cursor: pointer;
+  }
+
+  rev {
+    cursor: pointer;
+    font-weight: bold;
+  }
+ 
+
+@media screen and (max-width: 1200px) {
     .container {
         grid-template-columns: 150px 1fr 200px;
     }
- }
-  
- @media screen and (max-width: 800px) {
+}
+
+@media screen and (max-width: 800px) {
     .container {
         grid-template-columns: 80px 1fr;
     }
-  
+
     .sidebar .logo-img {
         display: none;
     }
-  
+
     .news {
         display: none;
     }
- }
-  
- @media screen and (max-width: 600px) {
+}
+
+@media screen and (max-width: 600px) {
     .container {
         grid-template-columns: 1fr;
     }
-  
+
     .sidebar-container {
         display: none;
     }
 }
-  
+

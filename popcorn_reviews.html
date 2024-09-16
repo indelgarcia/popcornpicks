@@ -62,47 +62,57 @@
             <!-- Verified Reviews (Default View) -->
             <section class="review-posts" id="verified-reviews-view">
                 <h2>Verified Reviews</h2>
-                <div class="review-card" onclick="openReview()">
-                    <div class="review-header">
-                        <img src="https://via.placeholder.com/50" alt="Critic Avatar">
-                        <div class="review-info">
-                            <h3>Critic Review: The Shawshank Redemption</h3>
-                            <p>Rating: <strong>4.5/5</strong> | Critic: <strong>John Doe</strong></p>
+                <!-- Wrap the review in an anchor tag to make it clickable -->
+                <a href="reviews.html" class="review-link">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <img src="https://via.placeholder.com/50" alt="Critic Avatar">
+                            <div class="review-info">
+                                <h3>Critic Review: The Shawshank Redemption</h3>
+                                <p>Rating: <strong>4.5/5</strong> | Critic: <strong>John Doe</strong></p>
+                            </div>
                         </div>
+                        <p class="review-snippet">A timeless masterpiece. The storyline, acting, and overall presentation is phenomenal... <a href="#">Continue Reading</a></p>
                     </div>
-                    <p class="review-snippet">A timeless masterpiece. The storyline, acting, and overall presentation is phenomenal... <a href="#">Continue Reading</a></p>
-                </div>
+                </a>
 
-                <div class="review-card" onclick="openReview()">
-                    <div class="review-header">
-                        <img src="https://via.placeholder.com/50" alt="Audience Avatar">
-                        <div class="review-info">
-                            <h3>Audience Review: Inception</h3>
-                            <p>Rating: <strong>5/5</strong> | Audience: <strong>Jane Smith</strong></p>
+                <a href="reviews.html" class="review-link">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <img src="https://via.placeholder.com/50" alt="Audience Avatar">
+                            <div class="review-info">
+                                <h3>Audience Review: Inception</h3>
+                                <p>Rating: <strong>5/5</strong> | Audience: <strong>Jane Smith</strong></p>
+                            </div>
                         </div>
+                        <p class="review-snippet">Inception is a cinematic marvel that keeps you on the edge of your seat from start to finish... <a href="#">Continue Reading</a></p>
                     </div>
-                    <p class="review-snippet">Inception is a cinematic marvel that keeps you on the edge of your seat from start to finish... <a href="#">Continue Reading</a></p>
-                </div>
+                </a>
             </section>
 
             <!-- Movie-Specific Reviews (Hidden by Default) -->
             <section class="movie-posts" id="movie-reviews-view" style="display: none;">
                 <h2>Movies with Reviews</h2>
-                <div class="movie-card" onclick="openMovieReviews()">
-                    <img src="https://i.ebayimg.com/images/g/ag4AAOSw4CFY3NZF/s-l400.jpg" alt="Movie Poster">
-                    <div class="movie-info">
-                        <h3>The Shawshank Redemption</h3>
-                        <p>Avg Rating: <strong>4.5/5</strong></p>
+                <!-- Wrap the movie card in an anchor tag -->
+                <a href="movie_details.html" class="movie-link">
+                    <div class="movie-card">
+                        <img src="https://i.ebayimg.com/images/g/ag4AAOSw4CFY3NZF/s-l400.jpg" alt="Movie Poster">
+                        <div class="movie-info">
+                            <h3>The Shawshank Redemption</h3>
+                            <p>Avg Rating: <strong>4.5/5</strong></p>
+                        </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="movie-card" onclick="openMovieReviews()">
-                    <img src="https://play-lh.googleusercontent.com/buKf27Hxendp3tLNpNtP3E-amP0o4yYV-SGKyS2u-Y3GdGRTyfNCIT5WAVs2OudOz6so5K1jtYdAUKI9nw8" alt="Movie Poster">
-                    <div class="movie-info">
-                        <h3>Inception</h3>
-                        <p>Avg Rating: <strong>5/5</strong></p>
+                <a href="movie_details.html" class="movie-link">
+                    <div class="movie-card">
+                        <img src="https://play-lh.googleusercontent.com/buKf27Hxendp3tLNpNtP3E-amP0o4yYV-SGKyS2u-Y3GdGRTyfNCIT5WAVs2OudOz6so5K1jtYdAUKI9nw8" alt="Movie Poster">
+                        <div class="movie-info">
+                            <h3>Inception</h3>
+                            <p>Avg Rating: <strong>5/5</strong></p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </section>
 
             <!-- Pagination (if needed in the future) -->

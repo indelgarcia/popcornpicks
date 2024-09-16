@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review - Popcorn Picks</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/left_sidebar.css">
+    <link rel="stylesheet" href="css/reviews.css">
+</head>
+<body>
+    <div class="container-2-column">
+        <div id="left-sidebar"></div>
+        <script src="js/left_sidebar.js"></script>
+
+        <!-- Main Content -->
+        <main class="review-page-container">
+            <!-- Review Section -->
+            <section class="review-card">
+                <div class="review-header">
+                    <a href="movie_details.html" class="movie-poster-link">
+                        <img src="https://via.placeholder.com/150x225" alt="Movie Poster" class="movie-poster">
+                    </a>
+                    <div class="review-info">
+                        <h1>Movie Title Placeholder <span class="release-year">2024</span></h1>
+                        <p>Reviewed by <a href="reviewer_profile.html">Reviewer Name</a> <span class="review-type">- Critic</span></p>
+                        <p class="review-date">Watched on Sep 04, 2024</p>
+                        <p class="review-content">This is a placeholder for the review content. The review text will go here and provide the reviewer's thoughts and opinions on the movie.</p>
+                        <div class="review-tags">
+                            <span>Tag 1</span>
+                            <span>Tag 2</span>
+                            <span>Tag 3</span>
+                        </div>
+                        <div class="review-actions">
+                            <button class="like-btn">👍 Like</button>
+                            <button class="dislike-btn">👎 Dislike</button>
+                            <span class="report-abuse"><a href="#">Report Abuse</a></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- User Comments Section -->
+            <section class="comments-section">
+                <h2>58 COMMENTS</h2>
+                <div class="login-prompt">
+                    <p><a href="#">Sign in</a> or <a href="#">log in</a> to add a comment.</p>
+                </div>
+
+                <!-- Scrollable Comments List -->
+                <div class="comments-list">
+                    <div class="comment">
+                        <img src="https://via.placeholder.com/50" alt="User Avatar" class="comment-avatar">
+                        <div class="comment-content">
+                            <p class="comment-username">Gooby Doo</p>
+                            <p class="comment-text">First Helena Bonham Carter, now Bellucci lol</p>
+                            <p class="comment-timestamp">7d</p>
+                            <div class="comment-actions">
+                                <button class="reply-btn">Reply</button>
+                                <span class="report-abuse"><a href="#">Report</a></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Nested Replies -->
+                    <div class="comment-reply">
+                        <img src="https://via.placeholder.com/50" alt="User Avatar" class="comment-avatar">
+                        <div class="comment-content">
+                            <p class="comment-username">User123</p>
+                            <p class="comment-text">I think she was great in the role!</p>
+                            <p class="comment-timestamp">5d</p>
+                            <div class="comment-actions">
+                                <button class="reply-btn">Reply</button>
+                                <span class="report-abuse"><a href="#">Report</a></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more comments and replies as needed -->
+                </div>
+
+                <!-- Pagination for Comments -->
+                <div class="pagination">
+                    <button class="page-btn" disabled>Previous</button>
+                    <button class="page-btn">Next</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/reviews.js"></script>
+</body>
+</html>

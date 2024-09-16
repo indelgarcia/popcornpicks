@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Details - Popcorn Picks</title>
+    <link rel="stylesheet" href="css/movie_details.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/left_sidebar.css">
+</head>
+<body>
+    <div class="container-2-column">
+        <div id="left-sidebar"></div>
+        <script src="js/left_sidebar.js"></script>
+
+        <!-- Main Content -->
+        <main class="movie-details-container">
+            <!-- Movie Header -->
+            <section class="movie-header">
+                <div class="movie-poster-container" id="trailer-trigger">
+                    <img src="https://via.placeholder.com/150x225" alt="Movie Poster" class="movie-poster">
+                    <div class="overlay">
+                        <div class="play-button">▶</div>
+                    </div>
+                </div>
+                <div class="movie-info">
+                    <h1>Movie Title</h1>
+                    <p class="movie-synopsis">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p class="movie-cast"><strong>Cast:</strong> John Doe, Jane Smith, ...</p>
+                    <!-- Action Buttons -->
+                    <div class="action-buttons">
+                        <button class="button" id="add-watchlist-btn">Add to Watchlist</button>
+                        <button class="button" id="write-review-btn">Write a Review</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Ratings Section -->
+            <section class="ratings-section">
+                <h2>Ratings</h2>
+                <div class="ratings">
+                    <div class="critic-rating">
+                        <h3>Critic Rating</h3>
+                        <p>4.5/5</p>
+                    </div>
+                    <div class="audience-rating">
+                        <h3>Audience Rating</h3>
+                        <p>4.2/5</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Cast and Crew Section with Tabs -->
+            <section class="cast-crew-section">
+                <div class="tab">
+                    <button class="tablinks" onclick="openTab(event, 'Cast')">Cast</button>
+                    <button class="tablinks" onclick="openTab(event, 'Crew')">Crew</button>
+                    <button class="tablinks" onclick="openTab(event, 'Details')">Details</button>
+                    <button class="tablinks" onclick="openTab(event, 'Genres')">Genres</button>
+                    <button class="tablinks" onclick="openTab(event, 'Releases')">Releases</button>
+                </div>
+
+                <!-- Tab content -->
+                <div id="Cast" class="tabcontent">
+                    <h3>Cast</h3>
+                    <div class="cast-list">
+                        <span>Actor Name 1</span>
+                        <span>Actor Name 2</span>
+                        <span>Actor Name 3</span>
+                        <!-- Add more actors here -->
+                    </div>
+                </div>
+
+                <div id="Crew" class="tabcontent">
+                    <h3>Crew</h3>
+                    <div class="crew-list">
+                        <span>Director Name</span>
+                        <span>Producer Name</span>
+                        <!-- Add more crew here -->
+                    </div>
+                </div>
+
+                <div id="Details" class="tabcontent">
+                    <h3>Details</h3>
+                    <p>Details about the movie...</p>
+                </div>
+
+                <div id="Genres" class="tabcontent">
+                    <h3>Genres</h3>
+                    <p>Genre 1, Genre 2, Genre 3...</p>
+                </div>
+
+                <div id="Releases" class="tabcontent">
+                    <h3>Releases</h3>
+                    <p>Release dates and information...</p>
+                </div>
+            </section>
+
+            <!-- Reviews Section -->
+            <section class="reviews-section">
+                <h2>Reviews</h2>
+                <!-- Filter Options -->
+                <div class="filter-section">
+                    <div class="dropdown">
+                        <button class="filter-btn">Sort Reviews</button>
+                        <div class="dropdown-content single-select">
+                            <label><input type="radio" name="sort-filter" value="Most Recent"> Most Recent</label>
+                            <label><input type="radio" name="sort-filter" value="Highest Rated"> Highest Rated</label>
+                            <label><input type="radio" name="sort-filter" value="Most Popular"> Most Popular</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Review Cards -->
+                <div class="review-cards">
+                    <a href="reviews.html" class="review-link">
+                        <div class="review-card">
+                            <div class="review-header">
+                                <img src="https://via.placeholder.com/50" alt="Reviewer Avatar">
+                                <div class="review-info">
+                                    <h3>John Doe</h3>
+                                    <p>Rating: <strong>4.5/5</strong></p>
+                                </div>
+                            </div>
+                            <p class="review-snippet">A well-crafted movie with stunning visuals and a gripping storyline... <a href="#">Continue Reading</a></p>
+                        </div>
+                    </a>
+                    <!-- Additional review cards can be added here -->
+                </div>
+            </section>
+
+            <!-- Pagination for Reviews -->
+            <div class="pagination">
+                <button class="page-btn" disabled>Previous</button>
+                <button class="page-btn">Next</button>
+            </div>
+        </main>
+
+        <!-- Trailer Modal -->
+        <div id="trailer-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <iframe id="trailer-video" src="https://www.youtube.com/embed/sample-video" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <script src="js/movie_details.js"></script>
+</body>
+</html>

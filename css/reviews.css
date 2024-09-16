@@ -1,0 +1,196 @@
+/* Reviews Page Styles */
+.review-page-container {
+    padding: 20px;
+    background-color: #ffffff;
+    overflow-y: auto;
+}
+
+.review-card {
+    display: flex;
+    padding: 20px;
+    background-color: #f4f4f4;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.review-header {
+    display: flex;
+    gap: 20px;
+}
+
+.movie-poster-link {
+    position: relative;
+}
+
+.movie-poster {
+    border-radius: 10px;
+    width: 150px;
+    transition: 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for the movie poster */
+.movie-poster-link:hover .movie-poster {
+    opacity: 0.8; /* Dim the poster */
+}
+
+.movie-poster-link:hover::after {
+    content: "Click to view details";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 14px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.review-info {
+    max-width: 600px;
+}
+
+.review-info h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.release-year {
+    font-size: 18px;
+    color: #888;
+}
+
+.review-date, .review-content {
+    margin-top: 10px;
+    color: #555;
+}
+
+.review-tags {
+    margin-top: 10px;
+}
+
+.review-tags span {
+    background-color: #e0e0e0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.review-actions {
+    margin-top: 10px;
+}
+
+.review-actions button {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.review-actions .report-abuse a {
+    color: #ff0000;
+    font-size: 12px;
+}
+
+.comments-section {
+    margin-top: 20px;
+}
+
+.comments-section h2 {
+    margin: 0 0 20px 0;
+}
+
+.login-prompt {
+    margin-bottom: 20px;
+}
+
+.login-prompt a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Scrollable comments */
+.comments-list {
+    max-height: 200px; /* Adjust height as needed */
+    overflow-y: auto;
+    padding-right: 10px; /* Space for scrollbar */
+}
+
+.comment {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.comment-reply {
+    display: flex;
+    gap: 15px;
+    margin-left: 40px; /* Indentation for replies */
+    padding: 10px;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+}
+
+.comment-avatar {
+    border-radius: 50%;
+}
+
+.comment-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-username {
+    font-weight: bold;
+}
+
+.comment-text {
+    margin: 5px 0;
+}
+
+.comment-timestamp {
+    color: #888;
+    font-size: 12px;
+}
+
+.comment-actions {
+    margin-top: 5px;
+}
+
+.comment-actions .reply-btn {
+    background-color: transparent;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+}
+
+.comment-actions .report-abuse a {
+    color: #ff0000;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.page-btn {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.page-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
