@@ -66,8 +66,7 @@ a {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 350px;
     text-align: center;
-    margin: 60px auto auto auto; /* Added top margin to lower the position */
-    display: flex;
+    margin: 60px auto auto auto; 
     flex-direction: column;
     justify-content: center;
 }
@@ -80,7 +79,7 @@ a {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 350px;
     text-align: center;
-    margin: 60px auto auto auto; /* Added top margin to lower the position */
+    margin: 60px auto auto auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

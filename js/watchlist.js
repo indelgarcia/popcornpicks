@@ -24,14 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Handle "Post Watchlist" button click (you can replace this with a modal or form)
     postWatchlistBtn.addEventListener('click', () => {
-        alert('Post Watchlist clicked! This will eventually allow the user to submit a new watchlist.');
+        alert('Create Watchlist clicked! This will eventually allow the user to submit a new watchlist.');
     });
 });
 
-function openWatchlist() {
-    alert('Watchlist clicked! This will eventually show the full list of movies.');
-}
-
-function openDiscoverList() {
-    alert('Discover pick clicked! This will eventually show the full list of public movies.');
-}

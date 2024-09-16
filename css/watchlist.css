@@ -115,21 +115,29 @@ header {
     border-radius: 5px;
     width: max-content;
     white-space: nowrap;
+    right: 0; /* Align the dropdown to the right side of the button */
+    min-width: 150px; /* Set a minimum width */
 }
 
+/* Show the dropdown on hover */
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
+/* Ensure each item is aligned properly */
 .multi-select label, .single-select label {
     display: block;
     margin: 5px 0;
 }
 
+.multi-select label input, .single-select label input {
+    margin-right: 10px;
+}
+
 /* Filter Buttons */
 .filter-btn {
     background-color: #ffcc00;
-    color: #333;
+    color: #33f3;
     border: none;
     padding: 10px 15px;
     border-radius: 5px;
@@ -154,19 +162,28 @@ header {
 
 /* Watchlist and Discover Cards */
 .watchlist-card, .discover-card {
+    display: block; /* Make the cards behave like links */
     background-color: #f9f9f9;
     padding: 15px;
     margin-bottom: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    text-decoration: none; /* Remove underline for link */
+    color: inherit; /* Inherit the color from parent */
 }
 
 .watchlist-card:hover, .discover-card:hover {
     transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Clickable effect for links */
+.watchlist-card:active, .discover-card:active {
+    transform: scale(0.98);
+}
+
+/* Header inside the cards */
 .watchlist-header, .discover-header {
     display: flex;
     align-items: center;
@@ -190,12 +207,12 @@ header {
     margin-top: 10px;
 }
 
-.watchlist-snippet a, .discover-snippet a {
+.watchlist-snippet span, .discover-snippet span {
     color: #ff9900;
     text-decoration: none;
 }
 
-.watchlist-snippet a:hover, .discover-snippet a:hover {
+.watchlist-snippet span:hover, .discover-snippet span:hover {
     text-decoration: underline;
 }
 
@@ -224,7 +241,6 @@ header {
 .page-btn:hover:not(:disabled) {
     background-color: #ff9900;
 }
-
 
 /* Media Queries */
 @media screen and (max-width: 1200px) {
