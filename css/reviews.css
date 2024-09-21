@@ -67,34 +67,6 @@
     color: #555;
 }
 
-.review-tags {
-    margin-top: 10px;
-}
-
-.review-tags span {
-    background-color: #e0e0e0;
-    padding: 5px 10px;
-    border-radius: 5px;
-    margin-right: 5px;
-}
-
-.review-actions {
-    margin-top: 10px;
-}
-
-.review-actions button {
-    background-color: #f0f0f0;
-    border: none;
-    padding: 5px 10px;
-    margin-right: 5px;
-    cursor: pointer;
-}
-
-.review-actions .report-abuse a {
-    color: #ff0000;
-    font-size: 12px;
-}
-
 .comments-section {
     margin-top: 20px;
 }
