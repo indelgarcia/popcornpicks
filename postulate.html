@@ -1,0 +1,105 @@
+<!DOCTYPE html> 
+
+<html lang="en"> 
+
+  <head> 
+
+    <meta charset="UTF-8" /> 
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+
+    <title>Popcorn Picks Postulation</title> 
+
+    <link rel="stylesheet" href="css/styles.css" /> 
+
+    <link rel="stylesheet" href="css/postulate.css" /> 
+
+    <link rel="stylesheet" href="css/left_sidebar.css"/> 
+
+  </head> 
+
+  <body> 
+
+    <div class="container-2-column"> 
+
+      <div id="left-sidebar"></div> 
+
+      <script src="js/left_sidebar.js"></script> 
+
+    </div> 
+
+ 
+
+    <div class="centered-container login-container"> 
+
+      <div class="logo"> 
+
+        <img 
+
+          src="https://cdn-icons-png.flaticon.com/512/1828/1828640.png" 
+
+          alt="Popcorn Picks Logo" 
+
+        /> 
+
+      </div> 
+
+ 
+
+      <h2>Become Verified</h2> 
+
+      <form action="/login" method="POST"> 
+
+        <div class="input-group"> 
+
+          <label for="username">Full Name</label> 
+
+          <input type="text" id="username" name="username" required /> 
+
+          <label for="username">Full Surname</label> 
+
+          <input type="text" id="username" name="username" required /><br> 
+
+        </div> 
+
+         
+
+        <section class="documentos"> 
+
+            <h2>Add your CV</h2> 
+
+            <form action="subir_archivo.php" method="post" enctype="multipart/form-data"> 
+
+                <span id = 'cv'>Upload your CV telling us your workhistory, your reputation, your influence and your story.</span><br> 
+
+                <br><label for="archivo">Select:</label> 
+
+                <input type="file" id="archivo" name="archivo" accept=".pdf,.doc,.docx"> 
+
+            </form> 
+
+        </section> 
+
+         
+
+        <section class="referencias"> 
+
+            <h2>Your references</h2> 
+
+            <span>Add a link to some of your work. (News Media, Social Media....)</span><br> 
+
+            <br><label for="reference">Link:</label> 
+
+            <input type="text" id="reference" name="reference" required /><br> 
+
+        </section> 
+
+        <button type="submit" class="button">Send</button> 
+
+      </form> 
+
+    </div> 
+
+  </body> 
+
+</html> 
