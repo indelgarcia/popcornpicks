@@ -3,26 +3,40 @@ const isLoggedIn = localStorage.getItem('loggedIn') === 'true';
 
 // Update sidebar based on login state
 const updateSidebar = () => {
-  const sidebarItems = document.querySelectorAll('.menu ul li');
+    const sidebarItems = document.querySelectorAll('.menu ul li');
+    const logoutBtn = document.getElementById('logout-btn'); // Select the logout button
+    
+    if (isLoggedIn) {
+      // Hide login and signup buttons for logged-in users
+      sidebarItems.forEach(item => {
+        const linkText = item.querySelector('.text').textContent.trim();
+        if (linkText === 'Login' || linkText === 'Signup') {
+          item.style.display = 'none'; // Hide login and signup
+        }
+      });
+      // Show the logout button when logged in
+      logoutBtn.style.display = 'block';
+    } else {
+      // Show only login and signup for unregistered users
+      sidebarItems.forEach(item => {
+        const linkText = item.querySelector('.text').textContent.trim();
+        if (linkText !== 'Login' && linkText !== 'Signup') {
+          item.style.display = 'none'; // Hide all other buttons if not logged in
+        }
+      });
+      // Hide logout button when logged out
+      logoutBtn.style.display = 'none';
+    }
+  };
   
-  if (isLoggedIn) {
-    // Hide login and signup buttons for logged-in users
-    sidebarItems.forEach(item => {
-      const linkText = item.querySelector('.text').textContent.trim();
-      if (linkText === 'Login' || linkText === 'Signup') {
-        item.style.display = 'none'; // Hide login and signup
-      }
-    });
-  } else {
-    // Show only login and signup for unregistered users
-    sidebarItems.forEach(item => {
-      const linkText = item.querySelector('.text').textContent.trim();
-      if (linkText !== 'Login' && linkText !== 'Signup') {
-        item.style.display = 'none'; // Hide all other buttons if not logged in
-      }
-    });
-  }
-};
+  // Logout function with confirmation dialog
+  const logout = () => {
+    const confirmLogout = confirm("Are you sure you want to log out?");
+    if (confirmLogout) {
+      localStorage.setItem('loggedIn', 'false'); // Log the user out
+      window.location.href = 'index.html'; // Redirect to the homepage or login page
+    }
+  };
 
 // Handle the watchlist and review button clicks
 const restrictAccess = () => {
