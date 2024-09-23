@@ -21,10 +21,5 @@ document.addEventListener('DOMContentLoaded', () => {
         discoverPicksBtn.classList.add('active');
         yourWatchlistBtn.classList.remove('active');
     });
-
-    // Handle "Post Watchlist" button click (you can replace this with a modal or form)
-    postWatchlistBtn.addEventListener('click', () => {
-        alert('Create Watchlist clicked! This will eventually allow the user to submit a new watchlist.');
-    });
 });
 

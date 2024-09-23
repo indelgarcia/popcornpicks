@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Watchlist - PopcornPicks</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/left_sidebar.css">
+    <link rel="stylesheet" href="css/watchlist_post.css">
+</head>
+<body>
+    <div class="container-2-column">
+        <div id="left-sidebar"></div>
+        <script src="js/left_sidebar.js"></script>
+
+        <!-- Main Content -->
+        <main class="header watchlist-feed">
+            <header>
+                <div class="h">
+                    <h1>Your Watchlist</h1>
+                    <div class="top-bar">
+                        <input type="text" name="search" id="searchbar" placeholder="Search your watchlist...">
+                        <!-- New "Post Watchlist" Button -->
+                        <button class="post-watchlist-btn" id="post-watchlist-btn"><a href="watchlist.html">+ Your Watchlist</a></button>
+                    </div>
+                </div>
+            <div class="box">
+                <div class="wtch-name">
+                    <label for="watchlist-n">Watchlist Name       :</label>
+                    <input type="text" id="watchlist-n" name="watchlist-n" required/>
+                </div>
+                <div class="wtch-desc">
+                    <label for="watchlist-d">Watchlist Description:</label>
+                    <input type="text" id="watchlist-d" name="watchlist-d">
+                </div>
+                <div class="priv">
+                    <h3>Privacy</h3>
+                    <div class="priv-select">
+                            <label><input type="radio" name="sort-priv" value="Private">Private</label>
+                        <label><input type="radio" name="sort-priv" value="Public">Public</label>
+                    </div>
+                </div>
+                </div>
+                <div class="genres">
+                    <h3>Genre</h3>
+                    <div class="dropdown-content multi-select">
+                        <li><label><input type="checkbox" value="Action"> Action</label></li>
+                        <li><label><input type="checkbox" value="Drama"> Drama</label></li>
+                        <li><label><input type="checkbox" value="Comedy"> Comedy</label></li>
+                        <li><label><input type="checkbox" value="Thriller"> Thriller</label></li>
+                        <li><label><input type="checkbox" value="Classics"> Classics</label></li>
+                        <li><label><input type="checkbox" value="Sci-Fi"> Sci-Fi</label></li>
+                        <li><label><input type="checkbox" value="Romance"> Romance</label></li>
+                        <li><label><input type="checkbox" value="Fantasy"> Fantasy</label></li>
+                        <li><label><input type="checkbox" value="Documentary"> Documentary</label></li>
+                        <li><label><input type="checkbox" value="Horror"> Horror</label></li>
+                        <li><label><input type="checkbox" value="other"> Other...</label></li>
+                    </div>
+                </div>
+                <div class="add-movies">
+                    <input type="text" name="search" id="searchbar" placeholder="Search Movies to add">
+                    <button class="post-watchlist-btn" id="post-watchlist-btn"><a href="">+ Add Movies</a></button>
+                </div>
+                <div class="btn">
+                <button type="submit" class="button">Post</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/watchlist.js"></script>
+</body>
+</html>

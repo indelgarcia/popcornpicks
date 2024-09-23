@@ -1,0 +1,176 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  button,
+  input,
+  select,
+  textarea {
+    font-family: inherit;
+  }
+  a {
+    color: #333;
+  }
+  /* Header Styles */
+  header {
+    padding: 40px 20px;
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: rgb(248, 60, 60);
+    color: white;
+    font-family: "Raleway", sans-serif;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  .h,
+  button {
+    text-align: center;
+  }
+  /* Sidebar should remain fixed */
+  #left-sidebar {
+    height: 100vh; /* Full viewport height for sidebar */
+    overflow-y: auto; /* Ensure the sidebar can scroll if content exceeds height */
+  }
+  .box {
+    padding-top: 50px;
+  }
+  .wtch-name {
+    padding-top: 25px;
+  }
+  .wtch-desc {
+    padding-top: 25px;
+  }
+  .priv {
+    padding-top: 50px;
+  }
+  .btn {
+    padding-top: 50px;
+  }
+  /* Top Bar with Search */
+  .top-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  #searchbar {
+    border-radius: 100px;
+    width: 60%; /* Slightly smaller width */
+    margin-top: 20px; /* Keep it spaced similarly */
+    padding: 15px;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* New Post Watchlist Button */
+  .post-watchlist-btn {
+    background-color: #ffcc00;
+    color: #333;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .post-watchlist-btn:hover {
+    background-color: #ff9900;
+    color: #333;
+  }
+  
+  .watchlist-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .watchlist-header img {
+    width: 100px;
+    height: 150px;
+    border-radius: 10px;
+  }
+  
+  .watchlist-info h3,
+  .discover-info h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .watchlist-snippet,
+  .discover-snippet {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  .watchlist-snippet a,
+  .discover-snippet a {
+    color: #ff9900;
+    text-decoration: none;
+  }
+  
+  .watchlist-snippet a:hover,
+  .discover-snippet a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Pagination */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .page-btn {
+    background-color: #ffcc00;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .page-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .page-btn:hover:not(:disabled) {
+    background-color: #ff9900;
+  }
+  
+  /* Media Queries */
+  @media screen and (max-width: 1200px) {
+    .container {
+      grid-template-columns: 150px 1fr;
+    }
+  }
+  
+  @media screen and (max-width: 800px) {
+    .container {
+      grid-template-columns: 80px 1fr;
+    }
+  
+    .news {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .container {
+      grid-template-columns: 1fr;
+    }
+  
+    .sidebar-container {
+      display: none;
+    }
+  }
