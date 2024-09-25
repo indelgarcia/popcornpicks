@@ -40,32 +40,33 @@ const updateSidebar = () => {
 
 // Handle the watchlist and review button clicks
 const restrictAccess = () => {
-  // Watchlist
-  const watchlistButtons = document.querySelectorAll('.watchlist-btn');
-  watchlistButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      if (!isLoggedIn) {
-        window.location.href = 'login.html'; // Redirect to login if not logged in
-      } else {
-        window.location.href = 'watchlist.html'; // Allow if logged in
-      }
+    // Watchlist
+    const watchlistButtons = document.querySelectorAll('.watchlist-btn');
+    watchlistButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        if (!isLoggedIn) {
+          window.location.href = 'login.html'; // Redirect to login if not logged in
+        } else {
+          window.location.href = 'watchlist.html'; // Allow if logged in
+        }
+      });
     });
-  });
-
-  // Reviews
-  const reviewLinks = document.querySelectorAll('.user-reviews-section a');
-  reviewLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-      if (!isLoggedIn) {
-        e.preventDefault(); // Prevent the default behavior
-        window.location.href = 'login.html'; // Redirect to login page
-      }
+  
+    // Reviews
+    const reviewLinks = document.querySelectorAll('.user-reviews-section a');
+    reviewLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        if (!isLoggedIn) {
+            window.location.href = 'login.html'; // Redirect to login if not logged in
+          } else {
+            window.location.href = 'reviews.html'; // Allow if logged in
+          }
+      });
     });
+  };
+  
+  // Call functions on page load
+  document.addEventListener('DOMContentLoaded', () => {
+    updateSidebar(); // Update sidebar based on login status
+    restrictAccess(); // Restrict watchlist and reviews access
   });
-};
-
-// Call functions on page load
-document.addEventListener('DOMContentLoaded', () => {
-  updateSidebar(); // Update sidebar based on login status
-  restrictAccess(); // Restrict watchlist and reviews access
-});
