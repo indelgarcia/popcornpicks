@@ -122,7 +122,7 @@
 }
 
 /* Reviews Section */
-.reviews-section, .watchlist-section, .activity-section, .friends-section {
+.reviews-section, .watchlist-section, .activity-section {
   margin-bottom: 40px;
 }
 
@@ -247,53 +247,6 @@
   right: 10px;
 }
 
-/* Friends Section */
-.friends-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.friend-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 120px;
-  padding: 10px;
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.friend-pic {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: 2px solid #ffcc00;
-  margin-bottom: 10px;
-  object-fit: cover;
-}
-
-.friend-name {
-  font-weight: bold;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.unfriend-btn {
-  padding: 5px 10px;
-  background-color: #dc3545;
-  border: none;
-  border-radius: 4px;
-  color: white;
-  cursor: pointer;
-  font-size: 0.9em;
-}
-
-.unfriend-btn:hover {
-  background-color: #c82333;
-}
-
 /* Modal Styling */
 .modal {
   display: none; /* Hidden by default */
@@ -391,9 +344,5 @@
 @media (max-width: 768px) {
   .profile-info {
       flex-direction: column;
-  }
-
-  .friends-list {
-      justify-content: center;
   }
 }
