@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+    
     const stars = document.querySelectorAll('.star');
     const ratingValue = document.getElementById('rating-value');
     const ratingDisplay = document.getElementById('rating-display');  // New rating display element

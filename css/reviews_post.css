@@ -1,3 +1,39 @@
+/* Right container holds all the main content and is scrollable */
+.right-content-container {
+    height: 100vh; /* Full viewport height */
+    overflow-y: auto; /* Enable scrolling on the right side only */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Movie Header Styling */
+.movie-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.movie-poster {
+    width: 150px;
+    height: 225px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.movie-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.movie-title {
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+}
+
 /* Make sure all input fields and buttons are the same width */
 form input[type="text"],
 form textarea,
