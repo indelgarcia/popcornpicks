@@ -235,35 +235,6 @@ header {
     cursor: pointer;
     font-weight: bold;
   }
- 
 
-@media screen and (max-width: 1200px) {
-    .container {
-        grid-template-columns: 150px 1fr 200px;
-    }
-}
 
-@media screen and (max-width: 800px) {
-    .container {
-        grid-template-columns: 80px 1fr;
-    }
-
-    .sidebar .logo-img {
-        display: none;
-    }
-
-    .news {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .container {
-        grid-template-columns: 1fr;
-    }
-
-    .sidebar-container {
-        display: none;
-    }
-}
 

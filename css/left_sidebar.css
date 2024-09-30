@@ -58,9 +58,3 @@
     background-color: #ff7d7d;
   }
   
-  @media screen and (max-width: 600px) {
-    .sidebar-container {
-      display: none;
-    }
-  }
-  
