@@ -34,6 +34,18 @@ a {
     margin-top: 10px;
 }
 
+.view-btn {
+    background-color: #ffcc00;
+    color: #333;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+}
+
 .button:hover {
     background-color: #ff9900;
 }
