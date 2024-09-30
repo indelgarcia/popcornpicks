@@ -47,7 +47,7 @@ const restrictAccess = () => {
         if (!isLoggedIn) {
           window.location.href = 'login.html'; // Redirect to login if not logged in
         } else {
-          window.location.href = 'watchlist.html'; // Allow if logged in
+          window.location.href = 'watchlist_mainpage.html'; // Allow if logged in
         }
       });
     });
