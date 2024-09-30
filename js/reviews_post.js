@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const stars = document.querySelectorAll('.star');
     const ratingValue = document.getElementById('rating-value');
+    const ratingDisplay = document.getElementById('rating-display');  // New rating display element
     const reviewText = document.getElementById('review-text');
     const wordCount = document.getElementById('word-count');
     const cancelBtn = document.getElementById('cancel-btn');
@@ -15,6 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
             // Highlight the stars up to the clicked one
             resetStars();
             highlightStars(rating);
+
+            // Display the selected rating (e.g., 5/10)
+            ratingDisplay.textContent = `${rating}/10`;
         });
 
         // Hover event to highlight stars up to the hovered one
