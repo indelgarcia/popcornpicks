@@ -21,11 +21,3 @@ document.addEventListener('DOMContentLoaded', () => {
         verifiedReviewsBtn.classList.remove('active');
     });
 });
-
-function openReview() {
-    alert('Review clicked! This will eventually open the full review.');
-}
-
-function openMovieReviews() {
-    alert('Movie clicked! This will show specific reviews for that movie.');
-}
