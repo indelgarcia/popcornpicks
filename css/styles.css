@@ -31,6 +31,7 @@ a {
     cursor: pointer;
     font-size: 18px; /* Slightly larger text */
     transition: background-color 0.3s ease; /* Smooth hover effect */
+    margin-top: 10px;
 }
 
 .button:hover {
