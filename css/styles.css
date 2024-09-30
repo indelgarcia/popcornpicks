@@ -55,8 +55,7 @@ a {
   display: grid;
   grid-template-columns: 200px 1fr;
   height: 100vh;
-  /*overflow: hidden;*/
-  overflow-y: auto;
+  overflow: hidden;
 } 
 
 /* Centered Containers */
