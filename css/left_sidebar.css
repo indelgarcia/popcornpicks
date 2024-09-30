@@ -58,3 +58,6 @@
     background-color: #ff7d7d;
   }
   
+  .hidden {
+    display: none;
+}

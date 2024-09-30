@@ -22,30 +22,26 @@
         />
       </div>
       <h2>Create Your Popcorn Picks Account</h2>
-      <form action="/signup" method="POST">
+      <form id="signup-form" onsubmit="signup(event)">
         <div class="input-group">
-          <label for="username">Username</label>
-          <input type="text" id="username" name="username" required />
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required />
         </div>
         <div class="input-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required />
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
         </div>
         <div class="input-group">
-          <label for="password">Password</label>
-          <input type="password" id="password" name="password" required />
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required />
         </div>
         <div class="input-group">
-          <label for="confirm-password">Confirm Password</label>
-          <input
-            type="password"
-            id="confirm-password"
-            name="confirm-password"
-            required
-          />
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" name="confirm-password" required />
         </div>
         <button type="submit" class="button">Sign Up</button>
-      </form>
+    </form>
+    
       <p>Already have an account? <a href="login.html">Login</a></p>
     </div>
   </body>

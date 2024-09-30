@@ -23,17 +23,18 @@
       </div>
 
       <h2>Login to Popcorn Picks</h2>
-      <form action="/login" method="POST">
+      <form id="login-form" onsubmit="login(event)">
         <div class="input-group">
-          <label for="username">Username</label>
-          <input type="text" id="username" name="username" required />
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required />
         </div>
         <div class="input-group">
-          <label for="password">Password</label>
-          <input type="password" id="password" name="password" required />
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required />
         </div>
         <button type="submit" class="button">Login</button>
-      </form>
+    </form>
+    
       <p>Don't have an account? <a href="signup.html">Sign up</a></p>
     </div>
   </body>
