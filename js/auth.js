@@ -1,7 +1,6 @@
 // auth.js
 
 // Signup Function
-// Signup Function
 function signup(event) {
     event.preventDefault();  // Prevents page reload
 
