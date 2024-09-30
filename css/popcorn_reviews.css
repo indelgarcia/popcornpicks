@@ -211,30 +211,3 @@ header {
 .page-btn:hover:not(:disabled) {
     background-color: #ff9900;
 }
-
-/* Media Queries */
-@media screen and (max-width: 1200px) {
-    .container {
-        grid-template-columns: 150px 1fr;
-    }
-}
-
-@media screen and (max-width: 800px) {
-    .container {
-        grid-template-columns: 80px 1fr;
-    }
-
-    .news {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .container {
-        grid-template-columns: 1fr;
-    }
-
-    .sidebar-container {
-        display: none;
-    }
-}

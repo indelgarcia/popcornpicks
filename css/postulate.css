@@ -134,34 +134,3 @@ button.button:hover {
 
 } 
 
- 
-
-/* Responsive adjustments */ 
-
-@media (max-width: 768px) { 
-
-    .container-2-column { 
-
-        flex-direction: column; 
-
-    } 
-
- 
-
-    #left-sidebar { 
-
-        width: 100%; 
-
-        margin-bottom: 20px; 
-
-    } 
-
- 
-
-    .centered-container { 
-
-        width: 100%; 
-
-    } 
-
-} 

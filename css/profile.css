@@ -340,3 +340,9 @@
   color: #ffcc00;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile-info {
+      flex-direction: column;
+  }
+}
