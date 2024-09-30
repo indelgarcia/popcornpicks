@@ -26,5 +26,5 @@ Frontend: HTML, CSS, JavaScript (with AJAX) <br>
 Backend: Python (Web Development) <br>
 Database: BD
 
-This project is developed as part of our school coursework, and the repository is a place for us to showcase what we’ve been working on. To run the project locally, you can follow these basic steps:
+This project is developed as part of our school coursework, and the repository is a place for us to showcase what we’ve been working on.
 
