@@ -26,9 +26,16 @@ function signup(event) {
     const newUser = { username, email, password };
     users.push(newUser);
 
+    // Save the updated list of users in localStorage
     localStorage.setItem('users', JSON.stringify(users));
-    alert("Account created successfully!");
 
+    // Automatically log the user in
+    localStorage.setItem('isLoggedIn', 'true');
+    localStorage.setItem('loggedInUser', username);
+
+    alert("Account created successfully! You are now logged in.");
+
+    // Redirect to the homepage or another page
     window.location.href = 'index.html';
 }
 
