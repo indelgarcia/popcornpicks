@@ -59,7 +59,7 @@ const restrictAccess = () => {
         if (!isLoggedIn) {
             window.location.href = 'login.html'; // Redirect to login if not logged in
           } else {
-            window.location.href = 'reviews.html'; // Allow if logged in
+            window.location.href = 'reviews_details.html'; // Allow if logged in
           }
       });
     });
