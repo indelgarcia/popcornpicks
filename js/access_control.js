@@ -1,27 +1,27 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Check if user is logged in
+    // check if user is logged in
     const isLoggedIn = localStorage.getItem('isLoggedIn');
 
-    // Get all Watchlist buttons and review cards (for homepage or other sections)
+    // get elements: watchlist and review cards (for index)
     const watchlistButtons = document.querySelectorAll('.watchlist-btn');
     const reviewCards = document.querySelectorAll('.review-card');
 
-    // Get elements specific to movie details page
+    // get elements: add to watchlist and write review buttons (for movie details page)
     const addToWatchlistButton = document.getElementById('add-watchlist-btn');
     const writeReviewButton = document.getElementById('write-review-btn');
     const reviewLinks = document.querySelectorAll('.review-link');
 
-    // Function to redirect to login page if not logged in
+    // redirect to login page if not logged in
     function redirectToLogin() {
         alert("Please login to access this feature.");
         window.location.href = 'login.html';
     }
 
-    // Add event listener to Watchlist buttons (general watchlist buttons)
+    // event listener to Watchlist buttons (general watchlist buttons)
     watchlistButtons.forEach(button => {
         button.addEventListener('click', function (event) {
             if (isLoggedIn !== 'true') {
-                event.preventDefault();  // Prevent default action
+                event.preventDefault();  // prevent 
                 alert("Please login to add to Watchlist!");
                 window.location.href = 'login.html';  // Redirect to login page
             }
@@ -32,9 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
     reviewCards.forEach(card => {
         card.addEventListener('click', function (event) {
             if (isLoggedIn !== 'true') {
-                event.preventDefault();  // Prevent default action
-                alert("Please login to view reviews!");
-                window.location.href = 'login.html';  // Redirect to login page
+                redirectToLogin();
             }
         });
     });
@@ -43,7 +41,6 @@ document.addEventListener('DOMContentLoaded', function () {
     if (addToWatchlistButton) {
         addToWatchlistButton.addEventListener('click', function (event) {
             if (isLoggedIn !== 'true') {
-                event.preventDefault();  // Prevent default action
                 redirectToLogin();  // Redirect to login page
             }
         });
@@ -53,7 +50,6 @@ document.addEventListener('DOMContentLoaded', function () {
     if (writeReviewButton) {
         writeReviewButton.addEventListener('click', function (event) {
             if (isLoggedIn !== 'true') {
-                event.preventDefault();  // Prevent default action
                 redirectToLogin();  // Redirect to login page
             }
         });
@@ -63,7 +59,6 @@ document.addEventListener('DOMContentLoaded', function () {
     reviewLinks.forEach(link => {
         link.addEventListener('click', function (event) {
             if (isLoggedIn !== 'true') {
-                event.preventDefault();  // Prevent default action
                 redirectToLogin();  // Redirect to login page
             }
         });
