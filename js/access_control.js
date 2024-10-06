@@ -34,6 +34,9 @@ document.addEventListener('DOMContentLoaded', function () {
             if (isLoggedIn !== 'true') {
                 redirectToLogin();
             }
+            else {
+                window.location.href = 'reviews_details.html';  // Redirect to review details page
+            }
         });
     });
 
