@@ -60,9 +60,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Add event listener to review cards on the movie details page
     reviewLinks.forEach(link => {
-        link.addEventListener('click', function (event) {
+        link.addEventListener('click', function (event) {    
             if (isLoggedIn !== 'true') {
-                redirectToLogin();  // Redirect to login page
+                redirectToLogin();
+            } else {
+                window.location.href = '/reviews_post.html';
             }
         });
     });
