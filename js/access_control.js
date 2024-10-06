@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (isLoggedIn !== 'true') {
                 redirectToLogin();
             } else {
-                window.location.href = '/reviews_post.html';
+                window.location.href = 'reviews_details.html';
             }
         });
     });
