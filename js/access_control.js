@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Add event listener to 'Add to Watchlist' button (specific to movie details page)
+    // Add event listener to 'Add to Watchlist' button (in movie details page)
     if (addToWatchlistButton) {
         addToWatchlistButton.addEventListener('click', function (event) {
             if (isLoggedIn !== 'true') {
@@ -46,11 +46,14 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Add event listener to 'Write a Review' button (specific to movie details page)
+    // Add event listener to 'Write a Review' button (in movie details page)
     if (writeReviewButton) {
         writeReviewButton.addEventListener('click', function (event) {
             if (isLoggedIn !== 'true') {
-                redirectToLogin();  // Redirect to login page
+                redirectToLogin();  // redirect to login page
+            }
+            else{
+                window.location.href = 'reviews_post.html'; // if logged in, redirect to review post page
             }
         });
     }
