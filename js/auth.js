@@ -94,9 +94,9 @@ function checkLoginStatus() {
     const isLoggedIn = localStorage.getItem('isLoggedIn');
 
     // get login, signup, profile, reviews, watchlist, and logout buttons
-    const loginLink = document.querySelector('a[href="login.html"]').parentElement;
-    const signupLink = document.querySelector('a[href="signup.html"]').parentElement;
-    const profileLink = document.getElementById('profile-btn');
+    const loginButton = document.querySelector('a[href="login.html"]').parentElement;
+    const signupButton = document.querySelector('a[href="signup.html"]').parentElement;
+    const profileButton = document.getElementById('profile-btn');
     const reviewsButton = document.getElementById('reviews-btn');
     const watchlistButton = document.getElementById('watchlist-btn');
     const logoutButton = document.getElementById('logout-btn');
@@ -105,9 +105,9 @@ function checkLoginStatus() {
         // if logged in: 
         // hide login and signup, 
         // show profile, reviews, watchlist, and logout
-        loginLink.classList.add('hidden');
-        signupLink.classList.add('hidden');
-        profileLink.classList.remove('hidden');
+        loginButton.classList.add('hidden');
+        signupButton.classList.add('hidden');
+        profileButton.classList.remove('hidden');
         reviewsButton.classList.remove('hidden');
         watchlistButton.classList.remove('hidden');
         logoutButton.classList.remove('hidden');
@@ -115,9 +115,9 @@ function checkLoginStatus() {
         // if logged out:
         // show login and signup, 
         // hide profile, reviews, watchlist, and logout
-        loginLink.classList.remove('hidden');
-        signupLink.classList.remove('hidden');
-        profileLink.classList.add('hidden');
+        loginButton.classList.remove('hidden');
+        signupButton.classList.remove('hidden');
+        profileButton.classList.add('hidden');
         reviewsButton.classList.add('hidden');
         watchlistButton.classList.add('hidden');
         logoutButton.classList.add('hidden');
