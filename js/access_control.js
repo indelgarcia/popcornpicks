@@ -1,15 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
+
+
+    // === Helper Functions ===
+
+
     // check if user is logged in
     const isLoggedIn = localStorage.getItem('isLoggedIn');
-
-    // get elements: watchlist and review cards (for index)
-    const watchlistButtons = document.querySelectorAll('.watchlist-btn');
-    const reviewCards = document.querySelectorAll('.review-card');
-
-    // get elements: add to watchlist and write review buttons (for movie details page)
-    const addToWatchlistButton = document.getElementById('add-watchlist-btn');
-    const writeReviewButton = document.getElementById('write-review-btn');
-    const reviewLinks = document.querySelectorAll('.review-link');
 
     // redirect to login page if not logged in
     function redirectToLogin() {
@@ -17,7 +13,14 @@ document.addEventListener('DOMContentLoaded', function () {
         window.location.href = 'login.html';
     }
 
-    // event listener to Watchlist buttons (general watchlist buttons)
+
+    // === Index Page Functions ===
+
+    // get elements by classes
+    const watchlistButtons = document.querySelectorAll('.watchlist-btn');
+    const reviewCards = document.querySelectorAll('.review-card');
+
+    // event listener to Watchlist buttons
     watchlistButtons.forEach(button => {
         button.addEventListener('click', function (event) {
             if (isLoggedIn !== 'true') {
@@ -40,6 +43,17 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    
+    // === Movie Details Page Functions ===
+
+    
+    // get add-watchlist-btn and write-review-btn by IDs 
+    const addToWatchlistButton = document.getElementById('add-watchlist-btn');
+    const writeReviewButton = document.getElementById('write-review-btn');
+
+    // get all reviewlinks by class
+    const reviewLinks = document.querySelectorAll('.review-link'); 
+
     // Add event listener to 'Add to Watchlist' button (in movie details page)
     if (addToWatchlistButton) {
         addToWatchlistButton.addEventListener('click', function (event) {
@@ -53,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (writeReviewButton) {
         writeReviewButton.addEventListener('click', function (event) {
             if (isLoggedIn !== 'true') {
-                redirectToLogin();  // redirect to login page
+                redirectToLogin();  // if not logged in, redirect to login page
             }
             else{
                 window.location.href = 'reviews_post.html'; // if logged in, redirect to review post page
