@@ -1,4 +1,8 @@
+//reviews_post.js is used to implement the Write a Review form 
+// on the reviews Post Page.
+
 document.addEventListener('DOMContentLoaded', () => {
+    // get elements for the write a review form
     const stars = document.querySelectorAll('.star');
     const ratingValue = document.getElementById('rating-value');
     const ratingDisplay = document.getElementById('rating-display');  // New rating display element
@@ -6,65 +10,66 @@ document.addEventListener('DOMContentLoaded', () => {
     const wordCount = document.getElementById('word-count');
     const cancelBtn = document.getElementById('cancel-btn');
 
-    // Interactive star rating system (click and hover)
+    // interactive star rating system (click and hover)
     stars.forEach((star, index) => {
-        // Click event to lock the rating
+        // click event to lock the rating
         star.addEventListener('click', () => {
-            const rating = index + 1;  // Get the correct rating based on the index (1-based)
+            const rating = index + 1;  // get the correct rating based on the index (starts at 0)
             ratingValue.value = rating;
 
-            // Highlight the stars up to the clicked one
+            // highlight the stars up to the clicked one
             resetStars();
             highlightStars(rating);
 
-            // Display the selected rating (e.g., 5/10)
+            // display the selected rating (e.g., 5/10)
             ratingDisplay.textContent = `${rating}/10`;
         });
 
-        // Hover event to highlight stars up to the hovered one
+        // hover event to highlight stars up to the hovered one
         star.addEventListener('mouseover', () => {
             resetStars();
-            highlightStars(index + 1);  // Highlight stars up to the hovered one
+            highlightStars(index + 1);
         });
 
-        // Remove hover effect and reset stars when mouse leaves
+        // remove hover effect and reset stars when mouse leaves
         star.addEventListener('mouseout', () => {
             resetStars();
-            highlightStars(ratingValue.value); // Reapply the highlight for the selected rating
+            highlightStars(ratingValue.value); // reapply the highlight for the selected rating if clicked
         });
     });
 
-    // Word count display
+    // word count display
     reviewText.addEventListener('input', () => {
+        //split by whitespace, remove empty strings, and count the length
         wordCount.textContent = `Word Count: ${reviewText.value.split(/\s+/).filter(word => word.length > 0).length}`;
     });
 
-    // Cancel button redirects to previous page
+    // cancel button redirects to previous page
     cancelBtn.addEventListener('click', () => {
         window.history.back();
     });
 
-    // Form submission logic
-    document.getElementById('review-form').addEventListener('submit', (e) => {
-        e.preventDefault();
-        alert('Review Submitted!'); // Placeholder action for form submission
+    // form submission logic
+    document.getElementById('review-form').addEventListener('submit', (event) => {
+        alert('Review Submitted!'); // alert message for review submission
+        window.history.back();  // redirect to previous page
     });
 
-    // Helper function to highlight stars up to a specific value
+    // helper function to highlight stars up to a specific value
     function highlightStars(rating) {
         stars.forEach((star, index) => {
             if (index < rating) {
-                star.textContent = '★';  // Filled star
-                star.style.color = '#ffcc00';  // Solid yellow color
+                star.textContent = '★';  // filled star
+                star.style.color = 'gold';  // gold color
             }
         });
     }
 
-    // Helper function to reset all stars to the default state
+    // helper function to reset all stars to the default state
     function resetStars() {
         stars.forEach(star => {
-            star.textContent = '☆';  // Unfilled star
-            star.style.color = '#ffcc00';  // Lighter yellow color for hover
+            star.textContent = '☆';  // unfilled star
+            star.style.color = 'light gold'; 
         });
     }
 });

@@ -1,11 +1,16 @@
-// JS to switch between views and open reviews
+// reviews_mainpage.js is used to switch between the Verified reviews 
+// and Movie-Specific Reviews views on the reviews Main Page.
+
+
 document.addEventListener('DOMContentLoaded', () => {
+
+    // get view elements and buttons
     const verifiedReviewsView = document.getElementById('verified-reviews-view');
     const movieReviewsView = document.getElementById('movie-reviews-view');
     const verifiedReviewsBtn = document.getElementById('verified-reviews-btn');
     const movieReviewsBtn = document.getElementById('movie-reviews-btn');
 
-    // Switch to Verified Reviews View
+    // switch to Verified Reviews View
     verifiedReviewsBtn.addEventListener('click', () => {
         movieReviewsView.style.display = 'none';
         verifiedReviewsView.style.display = 'block';
@@ -13,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         movieReviewsBtn.classList.remove('active');
     });
 
-    // Switch to Movie-Specific Reviews View
+    // switch to Movie-Specific Reviews View
     movieReviewsBtn.addEventListener('click', () => {
         verifiedReviewsView.style.display = 'none';
         movieReviewsView.style.display = 'block';
