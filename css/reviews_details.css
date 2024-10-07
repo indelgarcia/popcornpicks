@@ -2,7 +2,7 @@
 .review-page-container {
     padding: 20px;
     background-color: #ffffff;
-    overflow-y: auto;
+    overflow-y: scroll;
 }
 
 .review-card {
@@ -84,17 +84,10 @@
     text-decoration: none;
 }
 
-/* Scrollable comments */
-.comments-list {
-    max-height: 200px; /* Adjust height as needed */
-    overflow-y: auto;
-    padding-right: 10px; /* Space for scrollbar */
-}
-
 .comment {
     display: flex;
     gap: 15px;
-    margin-bottom: 15px;
+    margin-top: 15px;
     padding: 10px;
     background-color: #f9f9f9;
     border-radius: 5px;
@@ -103,6 +96,7 @@
 .comment-reply {
     display: flex;
     gap: 15px;
+    margin-top: 5px;
     margin-left: 40px; /* Indentation for replies */
     padding: 10px;
     background-color: #f3f3f3;
