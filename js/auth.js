@@ -12,6 +12,15 @@ function signup(event) {
     const password = document.getElementById('password').value;
     const confirmPassword = document.getElementById('confirm-password').value;
 
+    // regex to validate email domains
+    const emailPattern = /^[^\s@]+@[^\s@]+\.(com|co|edu|net)$/;
+
+    // email validation for allowed domains
+    if (!emailPattern.test(email)) {
+        alert("Please use a valid email with one of the following domains: .com, .co, .edu, .net");
+        return;
+    }
+
     // signup form validation, check if passwords match
     if (password !== confirmPassword) {
         alert("Passwords do not match!");
