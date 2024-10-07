@@ -1,4 +1,6 @@
 // left_sidebar.js
+
+
 document.getElementById('left-sidebar').innerHTML = `
 <div class="sidebar-container" id="sidebar-container">
     <aside class="sidebar" id="sidebar">
@@ -20,5 +22,5 @@ document.getElementById('left-sidebar').innerHTML = `
     </aside>
 </div>`;
 
-// Check login status to update the sidebar based on whether the user is logged in
+// check login status to update the sidebar based on whether the user is logged in
 checkLoginStatus();
