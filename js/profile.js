@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // get the Edit Profile and Settings buttons
     const editProfileBtn = document.querySelector('.edit-profile-btn');
     const settingsBtn = document.querySelector('.settings-btn');
-    const editProfileModal = document.getElementById('settings-modal'); // This will handle the edit profile tasks
-    const generalSettingsModal = document.getElementById('general-settings-modal'); // New modal for general settings
+    const editProfileModal = document.getElementById('settings-modal');
+    const generalSettingsModal = document.getElementById('general-settings-modal'); 
     const closeButtons = document.querySelectorAll('.close-button');
 
     // open the Edit Profile modal when the Edit Profile button is clicked
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const editProfileForm = editProfileModal.querySelector('form');
     // handle the form submission
     editProfileForm.addEventListener('submit', (event) => {
-        // ensure the page doesn't reload or submit the form without saving it first
+        // ensure the page is not buggy
         event.preventDefault();
         // retrieve edit profile form data
         const username = document.getElementById('username').value;

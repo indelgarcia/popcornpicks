@@ -27,21 +27,21 @@ document.addEventListener('DOMContentLoaded', function () {
     watchlistButtons.forEach(button => {
         button.addEventListener('click', function (event) {
             if (isLoggedIn !== 'true') {
-                event.preventDefault();  // prevent 
+                event.preventDefault(); // prevent the default action of the button, and do custom action
                 alert("Please login to add to Watchlist!");
-                window.location.href = 'login.html';  // Redirect to login page
+                window.location.href = 'login.html';  // redirect to login page
             }
         });
     });
 
-    // Add event listener to Review cards (general review cards)
+    // add event listener to Review cards
     reviewCards.forEach(card => {
         card.addEventListener('click', function (event) {
             if (isLoggedIn !== 'true') {
                 redirectToLogin();
             }
             else {
-                window.location.href = 'reviews_details.html';  // Redirect to review details page
+                window.location.href = 'reviews_details.html';  // redirect to review details page
             }
         });
     });
