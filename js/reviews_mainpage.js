@@ -5,24 +5,24 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     // get view elements and buttons
-    const verifiedReviewsView = document.getElementById('verified-reviews-view');
+    const allReviewsView = document.getElementById('all-reviews-view');
     const movieReviewsView = document.getElementById('movie-reviews-view');
-    const verifiedReviewsBtn = document.getElementById('verified-reviews-btn');
+    const allReviewsBtn = document.getElementById('all-reviews-btn');
     const movieReviewsBtn = document.getElementById('movie-reviews-btn');
 
     // switch to Verified Reviews View
-    verifiedReviewsBtn.addEventListener('click', () => {
+    allReviewsBtn.addEventListener('click', () => {
         movieReviewsView.style.display = 'none';
-        verifiedReviewsView.style.display = 'block';
-        verifiedReviewsBtn.classList.add('active');
+        allReviewsView.style.display = 'block';
+        allReviewsBtn.classList.add('active');
         movieReviewsBtn.classList.remove('active');
     });
 
     // switch to Movie-Specific Reviews View
     movieReviewsBtn.addEventListener('click', () => {
-        verifiedReviewsView.style.display = 'none';
+        allReviewsView.style.display = 'none';
         movieReviewsView.style.display = 'block';
         movieReviewsBtn.classList.add('active');
-        verifiedReviewsBtn.classList.remove('active');
+        allReviewsBtn.classList.remove('active');
     });
 });

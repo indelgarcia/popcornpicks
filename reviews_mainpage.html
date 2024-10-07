@@ -23,20 +23,20 @@
 
                 <!-- View Switcher -->
                 <div class="view-switcher">
-                    <button class="view-btn active" id="verified-reviews-btn">Verified Reviews</button>
+                    <button class="view-btn active" id="all-reviews-btn">All Reviews</button>
                     <button class="view-btn" id="movie-reviews-btn">Movies with Reviews</button>
                 </div>
             </header>
 
-            <!-- Filter Section for Verified Reviews -->
+            <!-- Filter Section for All Reviews -->
             <div class="filter-section" id="review-filters">
                 <!-- Sorting Options -->
                 <div class="dropdown">
                     <button class="filter-btn">Sort Reviews</button>
                     <div class="dropdown-content single-select">
-                        <label><input type="radio" name="sort-filter" value="Most Recent"> Most Recent</label>
-                        <label><input type="radio" name="sort-filter" value="Highest Rated"> Highest Rated</label>
-                        <label><input type="radio" name="sort-filter" value="Most Popular"> Most Popular</label>
+                        <label><input type="radio" name="sort-filter" value="Most Recent">Most Recent</label>
+                        <label><input type="radio" name="sort-filter" value="Highest Rated">Highest Rated</label>
+                        <label><input type="radio" name="sort-filter" value="Lowest Rated">Lowest Popular</label>
                     </div>
                 </div>
 
@@ -59,8 +59,8 @@
             </div>
 
             <!-- Verified Reviews (Default View) -->
-            <section class="review-posts" id="verified-reviews-view">
-                <h2>Verified Reviews</h2>
+            <section class="review-posts" id="all-reviews-view">
+                <h2>All Reviews</h2>
                 <!-- redirect tp reviews_details.html -->
                 <a href="reviews_details.html" class="review-link">
                     <div class="review-card">
