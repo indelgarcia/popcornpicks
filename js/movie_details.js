@@ -1,19 +1,22 @@
-// Get modal elements
-var modal = document.getElementById("trailer-modal");
-var trailerTrigger = document.getElementById("trailer-trigger");
+// get modal elements
+var modal = document.getElementById("image-modal");
+var imageTrigger = document.getElementById("image-trigger");
+var enlargedImage = document.getElementById("enlarged-image");
 var closeBtn = document.getElementsByClassName("close")[0];
 
-// When the user clicks on the movie poster, open the modal
-trailerTrigger.onclick = function() {
+// when the user clicks on the movie poster, open the modal
+imageTrigger.onclick = function() {
+    // Get the source of the movie poster and display it in the modal
+    enlargedImage.src = document.getElementById("movie-image").src;
     modal.style.display = "block";
 }
 
-// When the user clicks on the close button, close the modal
+// when the user clicks on the close button, close the modal
 closeBtn.onclick = function() {
     modal.style.display = "none";
 }
 
-// When the user clicks anywhere outside of the modal, close it
+// when the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";

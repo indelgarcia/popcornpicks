@@ -17,12 +17,9 @@
         <main class="movie-details-container">
             <!-- Movie Header -->
             <section class="movie-header">
-                <div class="movie-poster-container" id="trailer-trigger">
-                    <img src="https://via.placeholder.com/150x225" alt="Movie Poster" class="movie-poster">
-                    <div class="overlay">
-                        <div class="play-button">▶</div>
-                    </div>
-                </div>
+                <div class="movie-poster-container" id="image-trigger">
+                    <img src="https://via.placeholder.com/150x225" alt="Movie Poster" class="movie-poster" id="movie-image">
+                </div>                
                 <div class="movie-info">
                     <h1>Movie Title</h1>
                     <p class="movie-synopsis">Movide Description.</p>
@@ -134,11 +131,11 @@
             </div>
         </main>
 
-        <!-- Trailer Modal -->
-        <div id="trailer-modal" class="modal">
+        <!-- Image Modal -->
+        <div id="image-modal" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <iframe id="trailer-video" src="https://www.youtube.com/embed/sample-video" frameborder="0" allowfullscreen></iframe>
+                <img id="enlarged-image" src="https://via.placeholder.com/150x225" alt="Enlarged Movie Poster">
             </div>
         </div>
     </div>
