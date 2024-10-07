@@ -124,17 +124,6 @@ function checkLoginStatus() {
     }
 }
 
-function logout() {
-    // Clear session data from localStorage
-    localStorage.removeItem('isLoggedIn');
-    localStorage.removeItem('loggedInUser');
-    
-    alert("Logged out successfully!");
-
-    // Redirect to the homepage after logout
-    window.location.href = 'index.html';
-}
-
 // Run on page load
 window.onload = function() {
     checkLoginStatus();
