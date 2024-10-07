@@ -94,8 +94,8 @@ function checkLoginStatus() {
     const isLoggedIn = localStorage.getItem('isLoggedIn');
 
     // get login, signup, profile, reviews, watchlist, and logout buttons
-    const loginButton = document.querySelector('a[href="login.html"]').parentElement;
-    const signupButton = document.querySelector('a[href="signup.html"]').parentElement;
+    const loginButton = document.getElementById('login-btn');
+    const signupButton = document.getElementById('signup-btn');
     const profileButton = document.getElementById('profile-btn');
     const reviewsButton = document.getElementById('reviews-btn');
     const watchlistButton = document.getElementById('watchlist-btn');
