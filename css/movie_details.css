@@ -1,16 +1,8 @@
-/* Make the main container scrollable */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    overflow-y: auto; /* Ensure scrolling is allowed */
-}
-
 .movie-details-container {
     padding: 20px;
     background-color: #ffffff;
-    /* Removed overflow-y and max-height */
+    overflow-y: scroll;
+   
 }
 
 /* Action Buttons */
