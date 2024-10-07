@@ -109,10 +109,11 @@ function checkLoginStatus() {
     const reviewsButton = document.getElementById('reviews-btn');
     const watchlistButton = document.getElementById('watchlist-btn');
     const logoutButton = document.getElementById('logout-btn');
+    const postulateButton = document.getElementById('postulate-btn');
 
     if (isLoggedIn === 'true') {
-        // if logged in: 
-        // hide login and signup, 
+        // if logged in:
+        // hide login and signup,
         // show profile, reviews, watchlist, and logout
         loginButton.classList.add('hidden');
         signupButton.classList.add('hidden');
@@ -120,9 +121,10 @@ function checkLoginStatus() {
         reviewsButton.classList.remove('hidden');
         watchlistButton.classList.remove('hidden');
         logoutButton.classList.remove('hidden');
+        postulateButton.classList.remove('hidden');
     } else {
         // if logged out:
-        // show login and signup, 
+        // show login and signup,
         // hide profile, reviews, watchlist, and logout
         loginButton.classList.remove('hidden');
         signupButton.classList.remove('hidden');
@@ -130,6 +132,7 @@ function checkLoginStatus() {
         reviewsButton.classList.add('hidden');
         watchlistButton.classList.add('hidden');
         logoutButton.classList.add('hidden');
+        postulateButton.classList.add('hidden');
     }
 }
 

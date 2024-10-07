@@ -1,136 +1,139 @@
-.logo img { 
+.logo img {
 
-    width: 100px; 
+    width: 100px;
 
-    height: auto; 
+    height: auto;
 
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
 
-} 
+}
 
- 
 
-/* Form styling */ 
 
-form { 
+/* Form styling */
 
-    margin-top: 20px; 
+form {
 
-    text-align: left; 
+    margin-top: 20px;
 
-} 
+    text-align: left;
 
- 
+}
 
-.input-group { 
 
-    margin-bottom: 20px; 
 
-} 
+.input-group {
 
- 
+    margin-bottom: 20px;
 
-.input-group label { 
+}
 
-    display: block; 
 
-    margin: 5px 0; 
 
-} 
+.input-group label {
 
- 
+    display: block;
 
-.input-group input[type="text"] { 
+    margin: 5px 0;
 
-    width: 100%; 
+}
 
-    padding: 10px; 
 
-    margin-bottom: 10px; 
 
-    border: 1px solid #ccc; 
+.input-group input[type="text"] {
 
-    border-radius: 4px; 
+    width: 80%;
 
-} 
+    padding: 10px;
 
- 
+    margin-bottom: 10px;
 
-button.button { 
+    border: 1px solid #ccc;
 
-    background-color: #1a73e8; 
+    border-radius: 4px;
 
-    color: white; 
+}
 
-    border: none; 
 
-    padding: 10px 20px; 
 
-    font-size: 1em; 
+button.button {
 
-    cursor: pointer; 
+    background-color: #1a73e8;
 
-    border-radius: 4px; 
+    color: white;
 
-} 
+    border: none;
 
- 
+    padding: 10px 20px;
 
-button.button:hover { 
+    font-size: 1em;
 
-    background-color: #155ab5; 
+    cursor: pointer;
 
-} 
+    border-radius: 4px;
 
- 
+}
 
-/* Section styles */ 
 
-.documentos, .referencias { 
 
-    margin-bottom: 20px; 
+button.button:hover {
 
-} 
+    background-color: #155ab5;
 
- 
+}
 
-.documentos h2, .referencias h2 { 
 
-    color: #333; 
 
-    font-size: 1.5em; 
+/* Section styles */
 
-} 
+.documentos, .referencias {
 
- 
+    margin-bottom: 20px;
 
-.documentos span, .referencias span { 
+}
 
-    display: block; 
 
-    margin-bottom: 10px; 
 
-} 
+.documentos h2, .referencias h2 {
 
- 
+    color: #333;
 
-.documentos input[type="file"], .referencias input[type="text"] { 
+    font-size: 1.5em;
 
-    margin-top: 5px; 
+}
 
-    padding: 10px; 
 
-    border: 1px solid #ccc; 
 
-    border-radius: 4px; 
+.documentos span, .referencias span {
 
-} 
+    display: block;
 
- 
+    margin-bottom: 10px;
 
-.documentos input[type="file"] { 
+}
 
-    width: 100%; 
 
-} 
 
+.documentos input[type="file"], .referencias input[type="text"] {
+
+    margin-top: 5px;
+
+    padding: 10px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 4px;
+
+}
+
+
+
+.documentos input[type="file"] {
+
+    width: 80%;
+
+}
+
+.postulate-form{
+    overflow: auto;
+}

@@ -16,6 +16,7 @@ document.getElementById('left-sidebar').innerHTML = `
                 <li id="profile-btn" class="hidden"><a href="profile.html"><span class="icon">👤</span><span class="text">Profile</span></a></li>
                 <li id="reviews-btn" class="hidden"><a href="reviews_mainpage.html"><span class="icon">⭐️</span><span class="text">Popcorn Reviews</span></a></li>
                 <li id="watchlist-btn" class="hidden"><a href="watchlist_mainpage.html"><span class="icon">📺</span><span class="text">Watchlist</span></a></li>
+                <li id="postulate-btn" class="hidden"><a href="postulate.html"><span class="icon">📄</span><span class="text">Get Verified</span></a></li>
                 <li id="logout-btn" class="hidden"><a href="#" onclick="logout()"><span class="icon">🚪</span><span class="text">Logout</span></a></li>
             </ul>
         </nav>
