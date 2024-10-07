@@ -1,3 +1,6 @@
+//access_control.js
+
+// on page load, initalize an anonymous function to run the following code
 document.addEventListener('DOMContentLoaded', function () {
 
 
@@ -46,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     // === Movie Details Page Functions ===
 
-    
+
     // get add-watchlist-btn and write-review-btn by IDs 
     const addToWatchlistButton = document.getElementById('add-watchlist-btn');
     const writeReviewButton = document.getElementById('write-review-btn');
