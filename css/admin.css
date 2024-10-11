@@ -1,6 +1,6 @@
 /* Basic styling for the admin page */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Raleway', sans-serif;
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
@@ -11,34 +11,45 @@ body {
 }
 
 .container {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 400px;
+    text-align: center;
+    margin: 60px auto;
 }
 
 h1 {
-    text-align: center;
-    color: #333;
+    color: white;
+    background-color: rgb(248, 60, 60);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
+/* Updated button styles to match site theme */
 button {
     display: block;
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin-top: 20px;
-    background-color: #28a745;
-    color: white;
+    background-color: #ffcc00;
+    color: #333;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #218838;
+    background-color: #ff9900;
 }
 
+/* User list item styling */
 #user-list {
     margin-top: 20px;
 }
@@ -48,9 +59,9 @@ button:hover {
     justify-content: space-between;
     align-items: center;
     background-color: #f9f9f9;
-    padding: 10px;
+    padding: 15px;
     margin-bottom: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -59,13 +70,15 @@ button:hover {
     color: #333;
 }
 
+/* Delete button styled consistently */
 .delete-btn {
     background-color: #dc3545;
     color: white;
     border: none;
     padding: 5px 10px;
-    border-radius: 3px;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .delete-btn:hover {
