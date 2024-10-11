@@ -7,10 +7,33 @@
     <link rel="stylesheet" href="css/admin.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Admin Panel - Manage Users</h1>
-        <button id="view-users-btn">View All Users</button>
-        <div id="user-list"></div>
+    <div class="admin-container">
+        <!-- User Management Section -->
+        <div class="admin-section">
+            <h1>Admin Panel - Manage Users</h1>
+            <button id="view-users-btn">View All Users</button>
+            <div id="user-list"></div>
+        </div>
+
+        <!-- Verified User Requests Section -->
+        <div class="admin-section">
+            <h2>Manage Verified User Requests</h2>
+            <div id="verified-user-requests">
+                <p>No verification requests at the moment.</p>
+            </div>
+        </div>
+
+        <!-- Ban Users or Comment Section -->
+        <div class="admin-section">
+            <h2>Ban Users or Content</h2>
+            <div id="ban-comment-section">
+                <input type="text" id="ban-username" placeholder="Enter username to ban">
+                <button id="ban-user-btn">Ban User</button>
+                <br><br>
+                <input type="text" id="ban-comment-placeholder" placeholder="Enter comment to ban">
+                <button id="ban-comment-btn">Ban Comment</button>
+            </div>
+        </div>
     </div>
 
     <script src="js/admin.js"></script>

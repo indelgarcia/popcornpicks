@@ -1,47 +1,50 @@
-/* Basic styling for the admin page */
 body {
     font-family: 'Raleway', sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
+}
+
+/* Admin page container styling */
+.admin-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
     align-items: center;
-    height: 100vh;
-}
-
-.container {
-    background-color: #ffffff;
-    padding: 40px 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 400px;
-    text-align: center;
-    margin: 60px auto;
-}
-
-h1 {
-    color: white;
-    background-color: rgb(248, 60, 60);
+    background-color: #f4f4f4;
     padding: 20px;
+    margin: 0;
+}
+
+/* Admin section styling for separation */
+.admin-section {
+    background-color: #ffffff;
+    padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    font-size: 24px;
+    width: 100%;
+    max-width: 600px;
     margin-bottom: 20px;
 }
 
-/* Updated button styles to match site theme */
+.admin-section h1, .admin-section h2 {
+    background-color: rgb(248, 60, 60);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+/* Styling for buttons */
 button {
-    display: block;
     width: 100%;
     padding: 12px;
-    margin-top: 20px;
+    margin-top: 10px;
     background-color: #ffcc00;
     color: #333;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 16px;
     transition: background-color 0.3s ease;
 }
 
@@ -49,7 +52,17 @@ button:hover {
     background-color: #ff9900;
 }
 
-/* User list item styling */
+/* Input fields */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Section for user items */
 #user-list {
     margin-top: 20px;
 }
@@ -65,12 +78,7 @@ button:hover {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.user-item span {
-    font-size: 16px;
-    color: #333;
-}
-
-/* Delete button styled consistently */
+/* Delete button for user items */
 .delete-btn {
     background-color: #dc3545;
     color: white;
