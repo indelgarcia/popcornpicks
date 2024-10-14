@@ -61,3 +61,58 @@
   .hidden {
     display: none;
 }
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .sidebar {
+      width: 80px; /* Narrower sidebar */
+  }
+
+  .container-3-column {
+    grid-template-columns: 80px 1fr auto; /* Adjust sidebar width */
+}
+
+.container-2-column {
+  grid-template-columns: 80px 1fr; /* Shrink the sidebar */
+}
+
+  /* hide the text labels next to icons */
+  .sidebar .menu ul li a .text {
+      display: none;
+  }
+
+  /* reduce the padding for the list items to fit smaller screens */
+  .sidebar .menu ul li {
+      padding: 10px;
+      max-width: 80px;
+  }
+
+  /* reduce the size of the icons slightly */
+  .sidebar .menu ul li a .icon {
+      font-size: 16px;
+      margin-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+      width: 60px; /* Even narrower sidebar on mobile */
+  }
+
+  .container-3-column {
+    grid-template-columns: 60px 1fr; /* hide the right column on small screens */
+}
+
+.container-2-column {
+  grid-template-columns: 80px 1fr; 
+}
+
+  .sidebar .menu ul li {
+      padding: 8px;
+      max-width: 60px;
+  }
+
+  .sidebar .menu ul li a .icon {
+      font-size: 14px;
+  }
+}

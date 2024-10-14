@@ -190,4 +190,36 @@
     font-size: smaller;
     color: #777;
   }
+
+  /* For tablets and smaller screens */
+@media (max-width: 768px) {
+   .user-reviews {
+     width: 200px; /* Make the reviews section smaller */
+     padding: 15px;
+   }
+ 
+   /* Hide overflow contents */
+   .user-reviews-section {
+     overflow: hidden;
+   }
+   h1 {
+      font-size: 16px;
+  }
+ }
+ 
+ /* For mobile devices */
+ @media (max-width: 480px) {
+   .container-3-column {
+     grid-template-columns: 60px 1fr; /* Hide the right reviews column */
+   }
+ 
+   .user-reviews {
+     display: none; /* Completely hide the reviews section on small screens */
+   }
+   
+   h1 {
+      font-size: 16px;
+  }
+ }
+ 
   
