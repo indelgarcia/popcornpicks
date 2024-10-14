@@ -13,7 +13,7 @@ document.getElementById('comment-form').addEventListener('submit', function(even
         newComment.classList.add('comment');
 
         newComment.innerHTML = `
-            <img src="https://via.placeholder.com/50" alt="User Avatar" class="comment-avatar">
+            <img src="images/blank_profile_picture.png" alt="User Avatar" class="comment-avatar">
             <div class="comment-content">
                 <p class="comment-username">Current User</p>
                 <p class="comment-text">${commentText}</p>
