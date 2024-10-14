@@ -21,17 +21,6 @@
   font-size: 2em;
 }
 
-.top-bar {
-  display: flex;
-  gap: 10px;
-}
-
-.top-bar input[type="text"] {
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
 .edit-profile-btn {
   padding: 8px 16px;
   background-color: #ffcc00;
@@ -39,6 +28,7 @@
   border-radius: 4px;
   cursor: pointer;
   font-weight: bold;
+  margin-top: 10px;
 }
 
 .edit-profile-btn:hover {
