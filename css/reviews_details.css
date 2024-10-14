@@ -159,26 +159,10 @@
 }
 
 .comment-timestamp {
-    color: #888;
+    color: gray;
     font-size: 12px;
 }
 
-.comment-actions {
-    margin-top: 5px;
-}
-
-.comment-actions .reply-btn {
-    background-color: transparent;
-    border: none;
-    color: #007bff;
-    cursor: pointer;
-}
-
-.comment-actions .report-abuse a {
-    color: #ff0000;
-    font-size: 12px;
-    margin-left: 10px;
-}
 
 .pagination {
     display: flex;

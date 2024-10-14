@@ -18,12 +18,7 @@ document.getElementById('comment-form').addEventListener('submit', function(even
                 <p class="comment-username">Current User</p>
                 <p class="comment-text">${commentText}</p>
                 <p class="comment-timestamp">Just now</p>
-                <div class="comment-actions">
-                    <button class="reply-btn">Reply</button>
-                    <span class="report-abuse"><a href="#">Report</a></span>
-                </div>
-            </div>
-        `;
+            </div>`;
 
         // Agregar el nuevo comentario a la sección de comentarios
         document.querySelector('.comments-section').appendChild(newComment);
