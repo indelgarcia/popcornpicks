@@ -6,7 +6,7 @@ document.getElementById('left-sidebar').innerHTML = `
     <aside class="sidebar" id="sidebar">
         <div class="logo">
             <a href="index.html">
-                <img src="https://i.pinimg.com/736x/86/09/8b/86098b7d7d9439f6ee62c6d9615e3a39.jpg" alt="Logo" class="logo-img">
+                <img src="images/popcorn_logo.png" alt="Logo" class="logo-img">
             </a>
         </div>
         <nav class="menu">
