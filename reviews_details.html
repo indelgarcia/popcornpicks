@@ -30,6 +30,15 @@
                 </div>
             </section>
 
+            <!-- Formulario para agregar un nuevo comentario -->
+            <section class="new-comment-section">
+                <h3>Add a Comment</h3>
+                <form id="comment-form">
+                    <textarea id="comment-text" placeholder="Write your comment here..." rows="4" required></textarea>
+                    <button type="submit" class="submit-comment-btn">Submit</button>
+                </form>
+            </section>
+
             <!-- User Comments Section -->
             <section class="comments-section">
                 <h2>X COMMENTS</h2>
@@ -48,18 +57,7 @@
                         </div>
                     </div>
                     <!-- Nested Replies -->
-                    <div class="comment-reply">
-                        <img src="https://via.placeholder.com/50" alt="User Avatar" class="comment-avatar">
-                        <div class="comment-content">
-                            <p class="comment-username">User123</p>
-                            <p class="comment-text">I think she was great in the role!</p>
-                            <p class="comment-timestamp">5d</p>
-                            <div class="comment-actions">
-                                <button class="reply-btn">Reply</button>
-                                <span class="report-abuse"><a href="#">Report</a></span>
-                            </div>
-                        </div>
-                    </div>
+                    
                     <div class="comment">
                         <img src="https://via.placeholder.com/50" alt="User Avatar" class="comment-avatar">
                         <div class="comment-content">
@@ -73,17 +71,22 @@
                         </div>
                     </div>
 
-                <!-- Pagination for Comments -->
-                <div class="pagination">
-                    <button class="page-btn" disabled>Previous</button>
-                    <button class="page-btn">Next</button>
-                </div>
+                
+
+                
+
             </section>
+            <!-- Pagination for Comments -->
+            <div class="pagination">
+                <button class="page-btn" disabled>Previous</button>
+                <button class="page-btn">Next</button>
+            </div>
         </main>
     </div>
 
     <script src="js/auth.js"></script>
     <script src="js/left_sidebar.js"></script>
+    <script src="js/reviews_details.js"></script>
 
 </body>
 </html>

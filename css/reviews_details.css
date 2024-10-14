@@ -34,6 +34,44 @@
     opacity: 0.8; /* Dim the poster */
 }
 
+/* Estilo para el formulario de nuevo comentario */
+.new-comment-section {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+}
+
+#comment-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#comment-text {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-family: Arial, sans-serif;
+    resize: none;
+}
+
+.submit-comment-btn {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit-comment-btn:hover {
+    background-color: #0056b3;
+}
+
+/*-------------*/
+
+
 .movie-poster-link:hover::after {
     content: "Click to view details";
     position: absolute;
