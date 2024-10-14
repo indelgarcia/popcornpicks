@@ -208,7 +208,7 @@
  }
  
  /* For mobile devices */
- @media (max-width: 480px) {
+ @media (max-width: 550px) {
    .container-3-column {
      grid-template-columns: 60px 1fr; /* Hide the right reviews column */
    }
@@ -216,7 +216,7 @@
    .user-reviews {
      display: none; /* Completely hide the reviews section on small screens */
    }
-   
+
    h1 {
       font-size: 16px;
   }
