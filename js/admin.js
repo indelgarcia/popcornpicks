@@ -64,7 +64,7 @@ document.getElementById('view-users-btn').addEventListener('click', toggleUserLi
 
 
 // === Verification Requests ===
-// Mocking the data - Fetch from localStorage or API
+// Mocking the data - Fetch from localStorage
 const verifiedRequests = JSON.parse(localStorage.getItem('verifiedRequests')) || [];
 
 // Function to render verified requests
