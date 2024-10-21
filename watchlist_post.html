@@ -19,7 +19,7 @@
                 <div class="h">
                     <h1>Your Watchlist</h1>
                     <div class="top-bar">
-                        <input type="text" name="search" id="searchbar" placeholder="Search your watchlist...">
+                        <input type="text" name="search" class="searchbar" id="searchbar" placeholder="Search your watchlist...">
                         <!-- New "Post Watchlist" Button -->
                         <button class="post-watchlist-btn" id="post-watchlist-btn"><a href="watchlist_mainpage.html">Your Watchlist</a></button>
                     </div>
@@ -58,17 +58,20 @@
                     </div>
                 </div>
                 <div class="add-movies">
-                    <input type="text" name="search" id="searchbar" placeholder="Search Movies to add">
-                    <button class="post-watchlist-btn" id="post-watchlist-btn"><a href="">+ Add Movies</a></button>
+                    <input type="text" name="search" class="searchbar" id="movieInput" placeholder="Search Movies to add">
+                    <button class="post-watchlist-btn" id="addButton">+ Add Movies</button>
                 </div>
+                <div class="wtchlst">
+                    <ul id="watchlist"></ul>
+                </div>
+                
                 <div class="btn">
-                <button type="submit" class="button">Post</button>
+                <button type="submit" class="button"><a href="">Post</a></button>
                 </div>
             </div>
         </main>
     </div>
-
-    <script src="js/watchlist_mainpage.js"></script>
+    <script src="js/watchlist_post.js"></script>
     <script src="js/auth.js"></script>
 
 </body>

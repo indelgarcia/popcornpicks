@@ -64,7 +64,7 @@ button {
   gap: 20px;
 }
 
-#searchbar {
+.searchbar {
   border-radius: 100px;
   width: 60%; /* Slightly smaller width */
   margin-top: 20px; /* Keep it spaced similarly */
@@ -79,6 +79,7 @@ button {
   color: #333;
   border: none;
   padding: 10px 15px;
+  margin-top: 20px;
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
@@ -149,5 +150,35 @@ button {
 }
 
 .page-btn:hover:not(:disabled) {
+
+  background-color: #ff9900;
+}
+
+.wtchlst {
+padding: 10px 15px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+}
+
+li button {
+  background-color: #ffcc00;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+li button:hover {
   background-color: #ff9900;
 }
