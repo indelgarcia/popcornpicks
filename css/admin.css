@@ -65,6 +65,8 @@ input[type="text"] {
 /* Section for user items */
 #user-list {
     margin-top: 20px;
+    overflow: scroll;
+    max-height: 200px;
 }
 
 .user-item {
