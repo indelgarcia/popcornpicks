@@ -64,27 +64,46 @@ document.getElementById('view-users-btn').addEventListener('click', toggleUserLi
 
 
 // === Verification Requests ===
-// Mocking the data - Fetch from localStorage
-const verifiedRequests = JSON.parse(localStorage.getItem('verifiedRequests')) || [];
+// Track the state of verified requests visibility
+let areVerifiedRequestsVisible = false;
+
+// Function to toggle verified user requests visibility
+function toggleVerifiedRequests() {
+    const requestsDiv = document.getElementById('verified-user-requests');
+    
+    if (areVerifiedRequestsVisible) {
+        // Hide the requests
+        requestsDiv.style.display = 'none';
+        document.getElementById('view-verified-requests-btn').textContent = 'View Verified Requests';
+    } else {
+        // Show the requests and render them
+        renderVerifiedRequests();
+        requestsDiv.style.display = 'block';
+        document.getElementById('view-verified-requests-btn').textContent = 'Hide Verified Requests';
+    }
+    areVerifiedRequestsVisible = !areVerifiedRequestsVisible;
+}
 
 // Function to render verified requests
 function renderVerifiedRequests() {
+    const requests = JSON.parse(localStorage.getItem('verifiedRequests')) || [];
     const requestContainer = document.getElementById('verified-user-requests');
     requestContainer.innerHTML = ''; // Clear previous content
 
-    if (verifiedRequests.length === 0) {
+    if (requests.length === 0) {
         requestContainer.innerHTML = "<p>No verification requests at the moment.</p>";
         return;
     }
 
-    verifiedRequests.forEach((request, index) => {
+    requests.forEach((request, index) => {
         const requestItem = document.createElement('div');
         requestItem.classList.add('user-item');
 
         const requestInfo = document.createElement('span');
         requestInfo.textContent = `${index + 1}. ${request.name} ${request.surname}`;
 
-        const viewButton = document.createElement('button');
+        const viewButton = document.createElement('button');  // Changed to standard button element
+        viewButton.classList.add('verified-view-button');     // Add class for styling
         viewButton.textContent = 'View';
         viewButton.addEventListener('click', () => openModal(request));
 
@@ -93,6 +112,9 @@ function renderVerifiedRequests() {
         requestContainer.appendChild(requestItem);
     });
 }
+
+// Event listener for the toggle button
+document.getElementById('view-verified-requests-btn').addEventListener('click', toggleVerifiedRequests);
 
 // Function to open the modal with request details
 function openModal(request) {
@@ -118,8 +140,7 @@ document.getElementById('deny-btn').addEventListener('click', () => handleReques
 function handleRequest(action) {
     if (action === 'accept') {
         alert(`Request Accepted`);
-    }
-    else {
+    } else {
         alert(`Request Denied`);
     }
     closeModal();
