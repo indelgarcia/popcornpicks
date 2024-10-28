@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const wordCountDisplay = document.getElementById('word-count');
     const MIN_WORD_COUNT = 5; // Minimum word count requirement for the review
 
-    // Star rating interaction logic
+    // ====== Star rating interaction logic ======
     stars.forEach((star, index) => {
         star.addEventListener('click', () => {
             const rating = index + 1;
@@ -30,7 +30,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Word count display and validation on input
+    // ====== Star highlight helpers ======
+    function highlightStars(rating) {
+        stars.forEach((star, index) => {
+            if (index < rating) {
+                star.textContent = '★';
+                star.style.color = 'gold';
+            }
+        });
+    }
+
+    function resetStars() {
+        stars.forEach(star => {
+            star.textContent = '☆';
+            star.style.color = 'lightgoldenrodyellow';
+        });
+    }
+
+    // ====== Word count display and validation on input ======
     reviewText.addEventListener('input', () => {
         const wordCount = getWordCount(reviewText.value);
         wordCountDisplay.textContent = `Word Count: ${wordCount}`;
@@ -43,20 +60,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Helper function to calculate word count
+    function getWordCount(text) {
+        return text.trim().split(/\s+/).filter(word => word.length > 0).length;
+    }
+
     // Cancel button redirects to previous page
     cancelBtn.addEventListener('click', () => {
         window.history.back();
-    });
-
-    // Form submission with validation
-    form.addEventListener('submit', (event) => {
-        event.preventDefault(); // Prevent form submission
-        let isValid = validateForm();
-
-        if (isValid) {
-            alert('Review Submitted!');
-            window.history.back(); // Redirect if valid
-        }
     });
 
     // Form validation function
@@ -91,11 +102,6 @@ document.addEventListener('DOMContentLoaded', () => {
         return valid;
     }
 
-    // Helper function to calculate word count
-    function getWordCount(text) {
-        return text.trim().split(/\s+/).filter(word => word.length > 0).length;
-    }
-
     // Display error message next to the input, ensuring it's only shown once
     function displayErrorMessage(input, message) {
         let errorMessage = input.parentNode.querySelector(".error-message");
@@ -120,20 +126,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Star highlight helpers
-    function highlightStars(rating) {
-        stars.forEach((star, index) => {
-            if (index < rating) {
-                star.textContent = '★';
-                star.style.color = 'gold';
-            }
-        });
-    }
+    // Form submission with validation check
+    form.addEventListener('submit', (event) => {
+        event.preventDefault(); // Prevent form submission
+        let isValid = validateForm();
 
-    function resetStars() {
-        stars.forEach(star => {
-            star.textContent = '☆';
-            star.style.color = 'lightgoldenrodyellow';
-        });
-    }
+        if (isValid) {
+            alert('Review Submitted!');
+            window.history.back(); // Redirect if valid
+        }
+    });
 });
