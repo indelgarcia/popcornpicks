@@ -1,75 +1,139 @@
-//reviews_post.js is used to implement the Write a Review form 
-// on the reviews Post Page.
-
 document.addEventListener('DOMContentLoaded', () => {
-    // get elements for the write a review form
     const stars = document.querySelectorAll('.star');
     const ratingValue = document.getElementById('rating-value');
-    const ratingDisplay = document.getElementById('rating-display');  // New rating display element
+    const ratingDisplay = document.getElementById('rating-display');
     const reviewText = document.getElementById('review-text');
-    const wordCount = document.getElementById('word-count');
+    const reviewTitle = document.getElementById('review-title');
     const cancelBtn = document.getElementById('cancel-btn');
+    const form = document.getElementById('review-form');
+    const wordCountDisplay = document.getElementById('word-count');
+    const MIN_WORD_COUNT = 5; // Minimum word count requirement for the review
 
-    // interactive star rating system (click and hover)
+    // Star rating interaction logic
     stars.forEach((star, index) => {
-        // click event to lock the rating
         star.addEventListener('click', () => {
-            const rating = index + 1;  // get the correct rating based on the index (starts at 0)
+            const rating = index + 1;
             ratingValue.value = rating;
-
-            // highlight the stars up to the clicked one
             resetStars();
             highlightStars(rating);
-
-            // display the selected rating (e.g., 5/10)
             ratingDisplay.textContent = `${rating}/10`;
         });
 
-        // hover event to highlight stars up to the hovered one
         star.addEventListener('mouseover', () => {
             resetStars();
             highlightStars(index + 1);
         });
 
-        // remove hover effect and reset stars when mouse leaves
         star.addEventListener('mouseout', () => {
             resetStars();
-            highlightStars(ratingValue.value); // reapply the highlight for the selected rating if clicked
+            highlightStars(ratingValue.value);
         });
     });
 
-    // word count display
+    // Word count display and validation on input
     reviewText.addEventListener('input', () => {
-        //split by whitespace, remove empty strings, and count the length
-        wordCount.textContent = `Word Count: ${reviewText.value.split(/\s+/).filter(word => word.length > 0).length}`;
+        const wordCount = getWordCount(reviewText.value);
+        wordCountDisplay.textContent = `Word Count: ${wordCount}`;
+
+        // Validate word count and highlight if necessary
+        if (wordCount < MIN_WORD_COUNT) {
+            displayErrorMessage(reviewText, `Review must be at least ${MIN_WORD_COUNT} words.`);
+        } else {
+            clearErrorMessage(reviewText);
+        }
     });
 
-    // cancel button redirects to previous page
+    // Cancel button redirects to previous page
     cancelBtn.addEventListener('click', () => {
         window.history.back();
     });
 
-    // form submission logic
-    document.getElementById('review-form').addEventListener('submit', (event) => {
-        alert('Review Submitted!'); // alert message for review submission
-        window.history.back();  // redirect to previous page
+    // Form submission with validation
+    form.addEventListener('submit', (event) => {
+        event.preventDefault(); // Prevent form submission
+        let isValid = validateForm();
+
+        if (isValid) {
+            alert('Review Submitted!');
+            window.history.back(); // Redirect if valid
+        }
     });
 
-    // helper function to highlight stars up to a specific value
+    // Form validation function
+    function validateForm() {
+        let valid = true;
+
+        // Validate the Review Title
+        if (reviewTitle.value.trim() === "") {
+            displayErrorMessage(reviewTitle, "Review title cannot be empty.");
+            valid = false;
+        } else {
+            clearErrorMessage(reviewTitle);
+        }
+
+        // Validate the Review Text with word count check
+        const wordCount = getWordCount(reviewText.value);
+        if (wordCount < MIN_WORD_COUNT) {
+            displayErrorMessage(reviewText, `Review must be at least ${MIN_WORD_COUNT} words.`);
+            valid = false;
+        } else {
+            clearErrorMessage(reviewText);
+        }
+
+        // Validate the Rating
+        if (!ratingValue.value) {
+            displayErrorMessage(ratingDisplay, "Please select a star rating.");
+            valid = false;
+        } else {
+            clearErrorMessage(ratingDisplay);
+        }
+
+        return valid;
+    }
+
+    // Helper function to calculate word count
+    function getWordCount(text) {
+        return text.trim().split(/\s+/).filter(word => word.length > 0).length;
+    }
+
+    // Display error message next to the input, ensuring it's only shown once
+    function displayErrorMessage(input, message) {
+        let errorMessage = input.parentNode.querySelector(".error-message");
+
+        if (!errorMessage) {
+            errorMessage = document.createElement("span");
+            errorMessage.classList.add("error-message");
+            input.parentNode.appendChild(errorMessage);
+        }
+
+        errorMessage.textContent = message;
+        input.classList.add("error");
+        errorMessage.style.display = "inline";
+    }
+
+    // Clear the error message and styling
+    function clearErrorMessage(input) {
+        input.classList.remove("error");
+        const errorMessage = input.parentNode.querySelector(".error-message");
+        if (errorMessage) {
+            errorMessage.style.display = "none";
+        }
+    }
+
+    // Star highlight helpers
     function highlightStars(rating) {
         stars.forEach((star, index) => {
             if (index < rating) {
-                star.textContent = '★';  // filled star
-                star.style.color = 'gold';  // gold color
+                star.textContent = '★';
+                star.style.color = 'gold';
             }
         });
     }
 
-    // helper function to reset all stars to the default state
     function resetStars() {
         stars.forEach(star => {
-            star.textContent = '☆';  // unfilled star
-            star.style.color = 'light gold'; 
+            star.textContent = '☆';
+            star.style.color = 'lightgoldenrodyellow';
         });
     }
 });

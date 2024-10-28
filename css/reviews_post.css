@@ -101,3 +101,15 @@ textarea {
     color: #666;
     margin-top: 5px;
 }
+
+.error {
+    border: 2px solid red;
+    background-color: #ffe6e6;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    display: none; /* Hidden by default */
+}
