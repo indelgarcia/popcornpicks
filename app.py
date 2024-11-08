@@ -11,13 +11,13 @@ from routes.auth import auth_bp
 from routes.reviews import reviews_bp
 from routes.watchlist import watchlist_bp
 from routes.movies import movies_bp
-from routes.admin import admin_bp  # Import the admin blueprint
+from routes.admin import admin_bp 
 
 app.register_blueprint(auth_bp)
 app.register_blueprint(reviews_bp)
 app.register_blueprint(watchlist_bp)
 app.register_blueprint(movies_bp)
-app.register_blueprint(admin_bp)  # Register the admin blueprint
+app.register_blueprint(admin_bp) 
 
 # Homepage route
 @app.route('/')
