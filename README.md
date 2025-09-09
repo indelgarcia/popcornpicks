@@ -1,30 +1,51 @@
 # PopcornPicks
-__Overview__
 
-PopcornPicks is an interactive website developed by a group of movie enthusiasts who wanted to create a space where users can rate movies, read and share audience comments, reviews, and explore critics' opinions—all within a social media-like environment. Inspired by platforms like Letterboxd, Rotten Tomatoes, and X (formerly known as Twitter), PopcornPicks blends movie discussion with social interaction in a fresh and engaging way.
+PopcornPicks is a Flask-powered web application that blends movie discovery with social features. It lets users rate films, share opinions, and keep track of what they want to watch.
 
-__Team Members__ 
+## Features
+- **Movie ratings & reviews** – explore detailed pages for each film and see what others think.
+- **User accounts** – sign up, log in, and manage your profile.
+- **Watchlists** – save movies you plan to watch and revisit them later.
+- **Admin tools** – placeholder pages for future site management features.
 
-Indel Garcia<br>
-Pedro Gomez Dhers<br>
-Santino Curi<br>
-Marcos Miniati
+## Project structure
+```
+app.py               # Flask application entry point
+routes/              # Blueprints for auth, reviews, watchlists, movies, and admin
+static/              # CSS, JavaScript, and images
+templates/           # HTML templates rendered by Flask
+```
 
-We are a team of four students with a shared passion for watching movies and TV shows. PopcornPicks is our school project, aimed at showcasing our skills and creativity in web development.
+## Getting started
+### Prerequisites
+- Python 3.11+
+- `pip` for installing Python packages
+- Node.js & pnpm (optional, for working on front‑end assets)
 
-__Key Features__
+### Installation
+1. Clone the repository and enter the folder:
+   ```bash
+   git clone <repository-url>
+   cd popcornpicks
+   ```
+2. Create a virtual environment and install Python dependencies:
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate
+   pip install -r requirements.txt
+   ```
+3. (Optional) Install front‑end tooling:
+   ```bash
+   pnpm install
+   ```
 
-- Movie Ratings: Users can rate movies they have watched, providing valuable insights for other users.
-- Audience Comments + Reviews: Engage with other users by leaving comments on movies, discussing various aspects of films.
-- Critic Reviews: Access reviews from established critics to get a well-rounded perspective on movies.
-- Social Media-Like Feed: Our platform features a feed where users can see the latest reviews, comments, and ratings from people they follow, inspired by X (formerly Twitter).
-- Profile Pages: Users can create and customize their profiles, showcasing their favorite movies, ratings, and reviews.
+### Running the app
+Start the development server:
+```bash
+python app.py
+```
+This will launch a local server at `http://127.0.0.1:5000/`.
 
-__Technologies Used__
-
-Frontend: HTML, CSS, JavaScript (with AJAX) <br>
-Backend: Python (Web Development) <br>
-Database: BD
-
-This project is developed as part of our school coursework, and the repository is a place for us to showcase what we’ve been working on.
+## Contributing
+PopcornPicks is an educational project built by movie enthusiasts. Issues and pull requests are welcome—feel free to help us improve the platform!
 
